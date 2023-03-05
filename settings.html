@@ -124,6 +124,7 @@
         }
 
         .lang-con {
+            width: 100%;
             transition: all 0.4s ease-out;
             display: flex;
             flex-wrap: wrap;
@@ -169,7 +170,7 @@
     <div class="content">
         <div class="profile-bg">
             <img src="res/image/profile.png" class="profile-img">
-            <div class="profile-txt">shameeabi546@gmail.com</div>
+            <div class="profile-txt"></div>
         </div>
         <div class="content-btm">
             <div class="con">
@@ -209,8 +210,6 @@
                     $(".lang-con").append(`<div class="settings-bg2" onclick="openLang('${left}', '${right}');"><div class="con-bg2"><div class="con-txt">${langTxt(left)} > ${langTxt(right)}</div></div></div>`);
                 }
             }
-
-
         });
 
         function langTxt(index) {

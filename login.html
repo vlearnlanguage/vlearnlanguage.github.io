@@ -560,6 +560,8 @@
                         alert(errorCode);
                         if (errorCode == "auth/user-not-found") {
                             $(".error-show").text("*User not found!");
+                        } else if (errorCode == "auth/missing-email") {
+                            $(".error-show").text("*Email is missing!");
                         } else {
                             $(".error-show").text("*Unknown error occured!");
                         }
