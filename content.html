@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="res/jquery-3.6.2.min.js"></script>
     <title>Home - vLearn</title>
+    <script>
+        // add lesson count number each time new lesson create
+        lessonCount = { 1: 4, 2: 4, 3: 4, 4: 3, 5: 4 }
+    </script>
     <style>
         @font-face {
             font-family: berlin-bold;
@@ -55,11 +59,14 @@
             opacity: .4;
         }
 
-        .xp, .pts {
+        .xp,
+        .pts {
             font-size: large;
             color: #ff6600;
             padding-right: 3vw;
-        } .pts {
+        }
+
+        .pts {
             color: #17a786;
         }
 
@@ -581,12 +588,12 @@
         location.replace("#ct" + currentLevel);
 
         $(".xp").text(xp + " XP");
-        tmpXp=0;
+        tmpXp = 0;
         _len = Object.keys(xpDict).length;
-        for (i=0; i<_len; i++) {
-            tmpXp+=Object.values(xpDict)[i];
+        for (i = 0; i < _len; i++) {
+            tmpXp += Object.values(xpDict)[i];
         }
-        $(".pts").text(tmpXp+" Pts");
+        $(".pts").text(tmpXp + " Pts");
 
         var colorDict = {
             "green": "#0b8e02",
@@ -606,7 +613,6 @@
             if (index == "mal") return "Malayalam";
         }
 
-        lessonCount = { 1: 4, 2: 4, 3: 4, 4: 3, 5: 4 }
         localStorage.lessonCount = JSON.stringify(lessonCount);
         $(".top-txt").append(`${langTxt(currentLang)} > ${langTxt(yourLang)}`);
 
@@ -619,7 +625,6 @@
             localStorage.select_unit = unitLevel;
             setTimeout(() => { window.parent.location = "word.html"; }, 200);
         }
-
         function unitAppend(str) {
             $(".lesson-bg").append(`<div class="unit-bg"><div class="unit-txt">Unit ${unitCount}</div><div class="unit-des">${str}</div><img src="res/image/note.png" class="unit-img" onclick="unitClick(${unitCount})"></div>`); unitCount++;
         }
@@ -629,11 +634,11 @@
         }
         function ctAppend() {
             unitAppend("Making simple sentences, describing people");
-            for (i = 1; i <= 3; i++) { appendingLevel++; $(".lesson-bg").append(`<div class="les-bg" id="ct${appendingLevel}" onclick='clickFunc(${appendingLevel})'></div>`); checkAppend(); }
+            for (i = 1; i <= 3; i++) { appendingLevel++; $(".lesson-bg").append(`<div class="les-bg" id="ct${appendingLevel}" onclick='clickFunc(${appendingLevel}); localStorage.select_unit=${unitCount-1};'></div>`); checkAppend(); }
 
             unitAppend("To confirm, knowledge of the house");
             jumpAppend()
-            for (i = 1; i <= 2; i++) { appendingLevel++; $(".lesson-bg").append(`<div class="les-bg" id="ct${appendingLevel}" onclick='clickFunc(${appendingLevel})'></div>`); checkAppend(); }
+            for (i = 1; i <= 2; i++) { appendingLevel++; $(".lesson-bg").append(`<div class="les-bg" id="ct${appendingLevel}" onclick='clickFunc(${appendingLevel}); localStorage.select_unit=${unitCount-1};'></div>`); checkAppend(); }
 
             // unitAppend("Form the sentences, words");
             // jumpAppend()
@@ -677,7 +682,6 @@
             if (currentLevel == appendingLevel) {
                 $("#ct" + currentLevel).append(`<div class="less-txt"><span>${currentLesson}</span>/<span>${lessonCount[appendingLevel]}</span></div>`);
             }
-
         }
 
         $(".settings-nav").click(function () {
@@ -698,8 +702,6 @@
             $(".con").css({ transform: 'translateX(-100%)' });
             setTimeout(() => { $(".alphabet-con").css({ transform: 'translateX(0%)' }); }, 300);
         });
-
-        
 
     </script>
 </body>
