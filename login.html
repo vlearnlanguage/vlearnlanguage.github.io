@@ -98,6 +98,7 @@
         .cancel {
             width: 100vw;
             text-align: center;
+            text-decoration: underline;
             color: green;
             margin: 2vh 0;
             font-family: berlin-bold;
@@ -287,7 +288,7 @@
     <div class="mid">
         <div class="char-img-bg"><img src="res/image/character/squirrel.svg" class="char-img"></div>
         <div class="input-bg">
-            <div class="input-con">
+            <form class="input-con">
                 <!-- <div class="input-txt">Email</div>
                 <input type="email" name="email" id="email"> -->
 
@@ -301,7 +302,7 @@
 
                 <div class="form pass-form">
                     <div class="name-sectioin"></div>
-                    <input type="password" name="_email" id="password" required>
+                    <input type="password" name="_email" id="password" required autocomplete="false">
                     <label for="_email" class="label-name">
                         <span class="content-name">Password</span>
                     </label>
@@ -315,7 +316,7 @@
                     <div class="forgot-pass">Forgot password?</div>
                 </div>
                 <div class="error-show"></div>
-            </div>
+            </form>
         </div>
         <div class="btm">
             <div class="green-btn login-btn">LOGIN</div>

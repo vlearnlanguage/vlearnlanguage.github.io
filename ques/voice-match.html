@@ -105,7 +105,7 @@
         .gray-btn,
         .green-btn {
             width: 90vw;
-            height: 10vw;
+            padding: 10px 0;
             font-size: 5.5vw;
             font-family: berlin-bold;
             background-color: #b6b6b6;
@@ -143,14 +143,14 @@
 
         .result-ct {
             width: 100vw;
-            height: 15vh;
+            height: 20vh;
             background-color: #20cd20da;
             position: fixed;
-            top: 85vh;
+            top: 80vh;
             left: 0;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: center; align-content: center;
             transform: translateY(100%);
             opacity: 0;
             transition: all 0.2s ease-in-out;
@@ -261,7 +261,7 @@
         if (clickedMode == "left") {
             document.getElementById("aud" + int).play();
         }
-        if (ansMode == "left" && clickedMode == "left") {
+        if (clickedMode == "left") {
             //left side can select
             leftSelect = int;
             ansMode = "right";
