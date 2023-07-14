@@ -78,7 +78,7 @@ k++;
 window[t+"-type"+k] = "mcq";
 window[t+"-q"+k] = "big elephant"; window[t+"-m"+k] = "eng/unit3/big-elephant.mp3"; //m is music
 window[t+"-l"+k] = 6; //how many options are there
-window[t+"-o1"+k] = "വലുത്";
+window[t+"-o1"+k] = "വലിയ";
 window[t+"-o2"+k] = "ആന";
 window[t+"-o3"+k] = "അവൻ്റെ";
 window[t+"-o4"+k] = "ചെറുത്";
