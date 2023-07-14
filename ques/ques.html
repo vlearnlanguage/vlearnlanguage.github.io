@@ -136,8 +136,7 @@
             if (currentLesson == 3) appendStr = "c"
             if (currentLesson == 4) appendStr = "d"
 
-            totalLesson = window[appendStr];
-            console.log("TotalLesson is", totalLesson);
+            totalLesson = window['lesson'+currentLesson+'Total'];
         }
         checkAppendStr();
 
