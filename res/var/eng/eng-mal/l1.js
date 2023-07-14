@@ -1,641 +1,675 @@
-//Lesson1
+//Lesson1 [New Words]
 
-a = 0;
+k=0;t='a';
 
-a++;
-window["a-type"+a] = "image";
-window["a-q"+a] = "House"; window["a-m"+a] = "eng/level1/house.mp3"; //m is music
-window["a-n"+a] = "House"; window["a-n-m"+a] = "വീട്"; //n means new words, n-m means new word's meaning
-window["a-o1"+a] = "വെള്ളം"; window["a-l1-"+a] = "/level1/water.png";
-window["a-o2"+a] = "ചായ"; window["a-l2-"+a] = "/level1/tea.png";
-window["a-o3"+a] = "വീട്"; window["a-l3-"+a] = "/level1/house.png";
-window["a-o4"+a] = "കാർ"; window["a-l4-"+a] = "/level1/car.png";
-window["a-ans"+a] = 3;
+k++;
+window[t+"-type"+k] = "message";
+window[t+"-ti"+k] = "നമുക്ക് തുടങ്ങാം!"; //title
+window[t+"-msg"+k] = "ലളിതവും ഏറ്റവും കൂടുതൽ ഉപയോഗിക്കുന്നതുമായ വാക്കുകൾ പഠിച്ചുകൊണ്ട് നമുക്ക് ആരംഭിക്കാം."; //message
 
-a++;
-window["a-type"+a] = "image";
-window["a-q"+a] = "Car"; window["a-m"+a] = "eng/level1/car.mp3"; //m is music
-window["a-n"+a] = "Car"; window["a-n-m"+a] = "കാർ";
-window["a-o1"+a] = "ചൂട്"; window["a-l1-"+a] = "/level1/hot.png";
-window["a-o2"+a] = "വീട്"; window["a-l2-"+a] = "/level1/house.png";
-window["a-o3"+a] = "കാർ"; window["a-l3-"+a] = "/level1/car.png";
-window["a-o4"+a] = "തണുപ്പ്"; window["a-l4-"+a] = "/level1/cold.png";
-window["a-ans"+a] = 3;
+k++;
+window[t+"-type"+k] = "image";
+window[t+"-q"+k] = "House"; window[t+"-m"+k] = "eng/level1/house.mp3"; //m is music
+window[t+"-n"+k] = "House"; window[t+"-n-m"+k] = "വീട്"; //n means new words, n-m means new word's meaning
+window[t+"-o1"+k] = "വെള്ളം"; window[t+"-l1-"+k] = "/level1/water.png"; window[t+"-m1-"+k] = null;
+window[t+"-o2"+k] = "ചായ"; window[t+"-l2-"+k] = "/level1/tea.png"; window[t+"-m2-"+k] = null;
+window[t+"-o3"+k] = "വീട്"; window[t+"-l3-"+k] = "/level1/house.png"; window[t+"-m3-"+k] = null;
+window[t+"-o4"+k] = "കാർ"; window[t+"-l4-"+k] = "/level1/car.png"; window[t+"-m4-"+k] = null;
+window[t+"-ans"+k] = 3;
 
-a++;
-window["a-type"+a] = "mcq";
-window["a-q"+a] = "My car"; window["a-m"+a] = "eng/level1/my-car.mp3"; //m is music
-window["a-n"+a] = "My"; window["a-n-m"+a] = "എൻ്റെ";
-window["a-l"+a] = 6; //how many options are there
-window["a-o1"+a] = "കാർ";
-window["a-o2"+a] = "എന്ത്";
-window["a-o3"+a] = "അവളുടെ";
-window["a-o4"+a] = "ചെറുത്";
-window["a-o5"+a] = "എൻ്റെ";
-window["a-o6"+a] = "തണുപ്പ്";
-window["a-ans"+a] = [5,1];
+k++;
+window[t+"-type"+k] = "image";
+window[t+"-q"+k] = "Car"; window[t+"-m"+k] = "eng/level1/car.mp3"; //m is music
+window[t+"-n"+k] = "Car"; window[t+"-n-m"+k] = "കാർ";
+window[t+"-o1"+k] = "ചൂട്"; window[t+"-l1-"+k] = "/level1/hot.png";
+window[t+"-o2"+k] = "വീട്"; window[t+"-l2-"+k] = "/level1/house.png";
+window[t+"-o3"+k] = "കാർ"; window[t+"-l3-"+k] = "/level1/car.png";
+window[t+"-o4"+k] = "തണുപ്പ്"; window[t+"-l4-"+k] = "/level1/cold.png";
+window[t+"-ans"+k] = 3;
 
-a++;
-window["a-type"+a] = "mcq";
-window["a-q"+a] = "Your car"; window["a-m"+a] = "eng/level1/your-car.mp3"; //m is music
-window["a-n"+a] = "Your"; window["a-n-m"+a] = "നിൻ്റെ";
-window["a-l"+a] = 6; //how many options are there
-window["a-o1"+a] = "വലുത്";
-window["a-o2"+a] = "തണുപ്പ്";
-window["a-o3"+a] = "എൻ്റെ";
-window["a-o4"+a] = "നിൻ്റെ";
-window["a-o5"+a] = "കാർ";
-window["a-o6"+a] = "ചായ";
-window["a-ans"+a] = [4,5];
+k++;
+window[t+"-type"+k] = "mcq";
+window[t+"-q"+k] = "My car"; window[t+"-m"+k] = "eng/level1/my-car.mp3"; //m is music
+window[t+"-n"+k] = "My"; window[t+"-n-m"+k] = "എൻ്റെ";
+window[t+"-l"+k] = 6; //how many options are there
+window[t+"-o1"+k] = "കാർ";
+window[t+"-o2"+k] = "എന്ത്";
+window[t+"-o3"+k] = "അവൻ്റെ";
+window[t+"-o4"+k] = "ചെറുത്";
+window[t+"-o5"+k] = "എൻ്റെ";
+window[t+"-o6"+k] = "തണുപ്പ്";
+window[t+"-ans"+k] = [5,1];
 
-a++;
-window["a-type"+a] = "word";
-window["a-q"+a] = "നിൻ്റെ"; window["a-m"+a] = null; //m is music
-window["a-o1"+a] = "your";
-window["a-o2"+a] = "big";
-window["a-o3"+a] = "car";
-window["a-o4"+a] = "tea";
-window["a-ans"+a] = 1;
+k++;
+window[t+"-type"+k] = "mcq";
+window[t+"-q"+k] = "Your car"; window[t+"-m"+k] = "eng/level1/your-car.mp3"; //m is music
+window[t+"-n"+k] = "Your"; window[t+"-n-m"+k] = "നിങ്ങളുടെ / നിൻ്റെ";
+window[t+"-l"+k] = 6; //how many options are there
+window[t+"-o1"+k] = "വലുത്";
+window[t+"-o2"+k] = "തണുപ്പ്";
+window[t+"-o3"+k] = "എൻ്റെ";
+window[t+"-o4"+k] = "നിങ്ങളുടെ";
+window[t+"-o5"+k] = "കാർ";
+window[t+"-o6"+k] = "ചായ";
+window[t+"-ans"+k] = [4,5];
 
-a++;
-window["a-type"+a] = "mcq";
-window["a-q"+a] = "My house"; window["a-m"+a] = "eng/level1/my-house.mp3"; //m is music
-window["a-l"+a] = 6; //how many options are there
-window["a-o1"+a] = "വെള്ളം";
-window["a-o2"+a] = "നിൻ്റെ";
-window["a-o3"+a] = "വീട്";
-window["a-o4"+a] = "ചൂട്";
-window["a-o5"+a] = "എൻ്റെ";
-window["a-o6"+a] = "ചെറുത്";
-window["a-ans"+a] = [5,3];
+k++;
+window[t+"-type"+k] = "word";
+window[t+"-q"+k] = "നിങ്ങളുടെ"; window[t+"-m"+k] = null; //m is music
+window[t+"-o1"+k] = "your";
+window[t+"-o2"+k] = "big";
+window[t+"-o3"+k] = "car";
+window[t+"-o4"+k] = "tea";
+window[t+"-ans"+k] = 1;
 
-a++;
-window["a-type"+a] = "word";
-window["a-q"+a] = "ആണ്"; window["a-m"+a] = null; //m is music
-window["a-n"+a] = "is"; window["a-n-m"+a] = "ആണ്";
-window["a-o1"+a] = "house";
-window["a-o2"+a] = "is";
-window["a-o3"+a] = "car";
-window["a-o4"+a] = "cold";
-window["a-ans"+a] = 2;
+k++;
+window[t+"-type"+k] = "mcq";
+window[t+"-q"+k] = "My house"; window[t+"-m"+k] = "eng/level1/my-house.mp3"; //m is music
+window[t+"-l"+k] = 6; //how many options are there
+window[t+"-o1"+k] = "വെള്ളം";
+window[t+"-o2"+k] = "നിങ്ങളുടെ";
+window[t+"-o3"+k] = "വീട്";
+window[t+"-o4"+k] = "ചൂട്";
+window[t+"-o5"+k] = "എൻ്റെ";
+window[t+"-o6"+k] = "ചെറുത്";
+window[t+"-ans"+k] = [5,3];
 
-a++;
-window["a-type"+a] = "mcq";
-window["a-q"+a] = "My car is big"; window["a-m"+a] = "eng/level1/my-car-is-big.mp3"; //m is music
-window["a-n"+a] = "big"; window["a-n-m"+a] = "വലുത്";
-window["a-l"+a] = 8; //how many options are there
-window["a-o1"+a] = "ആണ്";
-window["a-o2"+a] = "വലുത്";
-window["a-o3"+a] = "കാർ";
-window["a-o4"+a] = "എൻ്റെ";
-window["a-o5"+a] = "വീട്";
-window["a-o6"+a] = "അവളുടെ";
-window["a-o7"+a] = "നിങ്ങളുടെ";
-window["a-o8"+a] = "തണുത്ത";
-window["a-ans"+a] = [4,3,2,1];
+k++;
+window[t+"-type"+k] = "word";
+window[t+"-q"+k] = "ആണ്"; window[t+"-m"+k] = null; //m is music
+window[t+"-n"+k] = "is"; window[t+"-n-m"+k] = "ആണ്";
+window[t+"-o1"+k] = "house";
+window[t+"-o2"+k] = "is";
+window[t+"-o3"+k] = "car";
+window[t+"-o4"+k] = "cold";
+window[t+"-ans"+k] = 2;
 
-a++;
-window["a-type"+a] = "word";
-window["a-q"+a] = "വലുത്"; window["a-m"+a] = null; //m is music
-window["a-o1"+a] = "your";
-window["a-o2"+a] = "big";
-window["a-o3"+a] = "small";
-window["a-o4"+a] = "is";
-window["a-ans"+a] = 2;
+k++;
+window[t+"-type"+k] = "mcq";
+window[t+"-q"+k] = "My car is big"; window[t+"-m"+k] = "eng/level1/my-car-is-big.mp3"; //m is music
+window[t+"-n"+k] = "big"; window[t+"-n-m"+k] = "വലുത്";
+window[t+"-l"+k] = 8; //how many options are there
+window[t+"-o1"+k] = "ആണ്";
+window[t+"-o2"+k] = "വലുത്";
+window[t+"-o3"+k] = "കാർ";
+window[t+"-o4"+k] = "എൻ്റെ";
+window[t+"-o5"+k] = "വീട്";
+window[t+"-o6"+k] = "അവൻ്റെ";
+window[t+"-o7"+k] = "നിങ്ങളുടെ";
+window[t+"-o8"+k] = "തണുപ്പ്";
+window[t+"-ans"+k] = [4,3,2,1];
 
-a++;
-window["a-type"+a] = "mcq";
-window["a-q"+a] = "My car is small"; window["a-m"+a] = "eng/level1/my-car-is-small.mp3"; //m is music
-window["a-n"+a] = "small"; window["a-n-m"+a] = "ചെറുത്";
-window["a-l"+a] = 8; //how many options are there
-window["a-o1"+a] = "ആണ്";
-window["a-o2"+a] = "വലുത്";
-window["a-o3"+a] = "അവളുടെ";
-window["a-o4"+a] = "എൻ്റെ";
-window["a-o5"+a] = "വീട്";
-window["a-o6"+a] = "കാർ";
-window["a-o7"+a] = "ചെറുത്";
-window["a-o8"+a] = "തണുപ്പ്";
-window["a-ans"+a] = [4,6,7,1];
+k++;
+window[t+"-type"+k] = "word";
+window[t+"-q"+k] = "വലുത്"; window[t+"-m"+k] = null; //m is music
+window[t+"-o1"+k] = "your";
+window[t+"-o2"+k] = "big";
+window[t+"-o3"+k] = "small";
+window[t+"-o4"+k] = "is";
+window[t+"-ans"+k] = 2;
 
-a++;
-window["a-type"+a] = "word";
-window["a-q"+a] = "ചെറുത്"; window["a-m"+a] = null; //m is music
-window["a-o1"+a] = "your";
-window["a-o2"+a] = "big";
-window["a-o3"+a] = "small";
-window["a-o4"+a] = "is";
-window["a-ans"+a] = 3;
+k++;
+window[t+"-type"+k] = "mcq";
+window[t+"-q"+k] = "My car is small"; window[t+"-m"+k] = "eng/level1/my-car-is-small.mp3"; //m is music
+window[t+"-n"+k] = "small"; window[t+"-n-m"+k] = "ചെറുത്";
+window[t+"-l"+k] = 8; //how many options are there
+window[t+"-o1"+k] = "ആണ്";
+window[t+"-o2"+k] = "വലുത്";
+window[t+"-o3"+k] = "അവൻ്റെ";
+window[t+"-o4"+k] = "എൻ്റെ";
+window[t+"-o5"+k] = "വീട്";
+window[t+"-o6"+k] = "കാർ";
+window[t+"-o7"+k] = "ചെറുത്";
+window[t+"-o8"+k] = "തണുപ്പ്";
+window[t+"-ans"+k] = [4,6,7,1];
 
-a++;
-window["a-type"+a] = "match";
-window["a-l"+a] = 4; //how many options are there
-window["a-o-l-1"+a] = "കാർ"; window["a-o-r-1"+a] = "car";
-window["a-o-l-2"+a] = "വലുത്"; window["a-o-r-2"+a] = "big";
-window["a-o-l-3"+a] = "എൻ്റെ"; window["a-o-r-3"+a] = "my";
-window["a-o-l-4"+a] = "ആണ്"; window["a-o-r-4"+a] = "is";
-window["a-o-l-5"+a] = "നിങ്ങളുടെ"; window["a-o-r-5"+a] = "your";
+k++;
+window[t+"-type"+k] = "word";
+window[t+"-q"+k] = "ചെറുത്"; window[t+"-m"+k] = "hin/level1/small.mp3"; //m is music
+window[t+"-o1"+k] = "your";
+window[t+"-o2"+k] = "big";
+window[t+"-o3"+k] = "small";
+window[t+"-o4"+k] = "is";
+window[t+"-ans"+k] = 3;
 
-a++;
-window["a-type"+a] = "match";
-window["a-l"+a] = 5; //how many options are there
-window["a-o-l-1"+a] = "ചെറുത്"; window["a-o-r-1"+a] = "Small";
-window["a-o-l-2"+a] = "ആണ്"; window["a-o-r-2"+a] = "is";
-window["a-o-l-3"+a] = "കാർ"; window["a-o-r-3"+a] = "car";
-window["a-o-l-4"+a] = "വലുത്"; window["a-o-r-4"+a] = "big";
-window["a-o-l-5"+a] = "വീട്"; window["a-o-r-5"+a] = "house";
+k++;
+window[t+"-type"+k] = "match";
+window[t+"-l"+k] = 5; //how many options are there
+window[t+"-o-l-1"+k] = "കാർ"; window[t+"-o-r-1"+k] = "car";
+window[t+"-o-l-2"+k] = "വലുത്"; window[t+"-o-r-2"+k] = "big";
+window[t+"-o-l-3"+k] = "എൻ്റെ"; window[t+"-o-r-3"+k] = "my";
+window[t+"-o-l-4"+k] = "ആണ്"; window[t+"-o-r-4"+k] = "is";
+window[t+"-o-l-5"+k] = "നിങ്ങളുടെ"; window[t+"-o-r-5"+k] = "your";
 
-a++;
-window["a-type"+a] = "voice-mcq";
-window["a-q"+a] = "eng/level1/your-house-is-small.mp3"; //file name
-window["a-l"+a] = 8; //how many options are there
-window["a-o1"+a] = "small";
-window["a-o2"+a] = "is";
-window["a-o3"+a] = "house";
-window["a-o4"+a] = "his";
-window["a-o5"+a] = "your";
-window["a-o6"+a] = "cold";
-window["a-o7"+a] = "and";
-window["a-o8"+a] = "my";
-window["a-ans"+a] = [5,3,2,1];
+k++;
+window[t+"-type"+k] = "match";
+window[t+"-l"+k] = 5; //how many options are there
+window[t+"-o-l-1"+k] = "ചെറുത്"; window[t+"-o-r-1"+k] = "Small";
+window[t+"-o-l-2"+k] = "ആണ്"; window[t+"-o-r-2"+k] = "is";
+window[t+"-o-l-3"+k] = "കാർ"; window[t+"-o-r-3"+k] = "car";
+window[t+"-o-l-4"+k] = "വലുത്"; window[t+"-o-r-4"+k] = "big";
+window[t+"-o-l-5"+k] = "വീട്"; window[t+"-o-r-5"+k] = "house";
 
-a++;
-window["a-type"+a] = "match";
-window["a-l"+a] = 5; //how many options are there
-window["a-o-l-1"+a] = "കാർ"; window["a-o-r-1"+a] = "car";
-window["a-o-l-2"+a] = "വലുത്"; window["a-o-r-2"+a] = "big";
-window["a-o-l-3"+a] = "എൻ്റെ"; window["a-o-r-3"+a] = "my";
-window["a-o-l-4"+a] = "നിങ്ങളുടെ"; window["a-o-r-4"+a] = "your";
-window["a-o-l-5"+a] = "വീട്"; window["a-o-r-5"+a] = "house";
+k++;
+window[t+"-type"+k] = "voice-mcq";
+window[t+"-q"+k] = "eng/level1/your-house-is-small.mp3"; //file name
+window[t+"-l"+k] = 8; //how many options are there
+window[t+"-o1"+k] = "small";
+window[t+"-o2"+k] = "is";
+window[t+"-o3"+k] = "house";
+window[t+"-o4"+k] = "his";
+window[t+"-o5"+k] = "your";
+window[t+"-o6"+k] = "cold";
+window[t+"-o7"+k] = "and";
+window[t+"-o8"+k] = "my";
+window[t+"-ans"+k] = [5,3,2,1];
+
+k++;
+window[t+"-type"+k] = "match";
+window[t+"-l"+k] = 5; //how many options are there
+window[t+"-o-l-1"+k] = "കാർ"; window[t+"-o-r-1"+k] = "car";
+window[t+"-o-l-2"+k] = "വലുത്"; window[t+"-o-r-2"+k] = "big";
+window[t+"-o-l-3"+k] = "എൻ്റെ"; window[t+"-o-r-3"+k] = "my";
+window[t+"-o-l-4"+k] = "നിങ്ങളുടെ"; window[t+"-o-r-4"+k] = "your";
+window[t+"-o-l-5"+k] = "വീട്"; window[t+"-o-r-5"+k] = "house";
+
 
 
 //Lesson2
 
-b = 0;
+lesson1Total = k;
+k=0;t='b';
 
-b++;
-window["b-type"+b] = "image";
-window["b-q"+b] = "Water"; window["b-m"+b] = "eng/level1/water.mp3"; //m is music
-window["b-n"+b] = "Water"; window["b-n-m"+b] = "വെള്ളം";
-window["b-o1"+b] = "ചായ"; window["b-l1-"+b] = "/level1/tea.png";
-window["b-o2"+b] = "വെള്ളം"; window["b-l2-"+b] = "/level1/water.png";
-window["b-o3"+b] = "തണുപ്പ്"; window["b-l3-"+b] = "/level1/cold.png";
-window["b-o4"+b] = "ചൂട്"; window["b-l4-"+b] = "/level1/hot.png";
-window["b-ans"+b] = 2;
+k++;
+window[t+"-type"+k] = "image";
+window[t+"-q"+k] = "Water"; window[t+"-m"+k] = "eng/level1/water.mp3"; //m is music
+window[t+"-n"+k] = "Water"; window[t+"-n-m"+k] = "വെള്ളം";
+window[t+"-o1"+k] = "ചായ"; window[t+"-l1-"+k] = "/level1/tea.png";
+window[t+"-o2"+k] = "വെള്ളം"; window[t+"-l2-"+k] = "/level1/water.png";
+window[t+"-o3"+k] = "തണുപ്പ്"; window[t+"-l3-"+k] = "/level1/cold.png";
+window[t+"-o4"+k] = "ചൂട്"; window[t+"-l4-"+k] = "/level1/hot.png";
+window[t+"-ans"+k] = 2;
 
-b++;
-window["b-type"+b] = "word";
-window["b-q"+b] = "വെള്ളം"; window["b-m"+b] = null; //m is music
-window["b-o1"+b] = "my";
-window["b-o2"+b] = "tea";
-window["b-o3"+b] = "water";
-window["b-o4"+b] = "cold";
-window["b-ans"+b] = 3;
+k++;
+window[t+"-type"+k] = "word";
+window[t+"-q"+k] = "വെള്ളം"; window[t+"-m"+k] = null; //m is music
+window[t+"-o1"+k] = "my";
+window[t+"-o2"+k] = "tea";
+window[t+"-o3"+k] = "water";
+window[t+"-o4"+k] = "cold";
+window[t+"-ans"+k] = 3;
 
-b++;
-window["b-type"+b] = "image";
-window["b-q"+b] = "Tea"; window["b-m"+b] = "eng/level1/tea.mp3"; //m is music
-window["b-n"+b] = "Tea"; window["b-n-m"+b] = "ചായ";
-window["b-o1"+b] = "തണുപ്പ്"; window["b-l1-"+b] = "/level1/cold.png";
-window["b-o2"+b] = "ചായ"; window["b-l2-"+b] = "/level1/tea.png";
-window["b-o3"+b] = "വെള്ളം"; window["b-l3-"+b] = "/level1/water.png";
-window["b-o4"+b] = "ചൂട്"; window["b-l4-"+b] = "/level1/hot.png";
-window["b-ans"+b] = 2;
+k++;
+window[t+"-type"+k] = "image";
+window[t+"-q"+k] = "Tea"; window[t+"-m"+k] = "eng/level1/tea.mp3"; //m is music
+window[t+"-n"+k] = "Tea"; window[t+"-n-m"+k] = "ചായ";
+window[t+"-o1"+k] = "തണുപ്പ്"; window[t+"-l1-"+k] = "/level1/cold.png";
+window[t+"-o2"+k] = "ചായ"; window[t+"-l2-"+k] = "/level1/tea.png";
+window[t+"-o3"+k] = "വെള്ളം"; window[t+"-l3-"+k] = "/level1/water.png";
+window[t+"-o4"+k] = "ചൂട്"; window[t+"-l4-"+k] = "/level1/hot.png";
+window[t+"-ans"+k] = 2;
 
-b++;
-window["b-type"+b] = "word";
-window["b-q"+b] = "ചായ"; window["b-m"+b] = null; //m is music
-window["b-o1"+b] = "big";
-window["b-o2"+b] = "tea";
-window["b-o3"+b] = "house";
-window["b-o4"+b] = "cold";
-window["b-ans"+b] = 2;
+k++;
+window[t+"-type"+k] = "word";
+window[t+"-q"+k] = "ചായ"; window[t+"-m"+k] = null; //m is music
+window[t+"-o1"+k] = "big";
+window[t+"-o2"+k] = "tea";
+window[t+"-o3"+k] = "house";
+window[t+"-o4"+k] = "cold";
+window[t+"-ans"+k] = 2;
 
-b++;
-window["b-type"+b] = "image";
-window["b-q"+b] = "Cold"; window["b-m"+b] = "eng/level1/cold.mp3"; //m is music
-window["b-n"+b] = "Cold"; window["b-n-m"+b] = "തണുപ്പ്";
-window["b-o1"+b] = "ചായ"; window["b-l1-"+b] = "/level1/tea.png";
-window["b-o2"+b] = "ചൂട്"; window["b-l2-"+b] = "/level1/hot.png";
-window["b-o3"+b] = "തണുപ്പ്"; window["b-l3-"+b] = "/level1/cold.png";
-window["b-o4"+b] = "വെള്ളം"; window["b-l4-"+b] = "/level1/water.png";
-window["b-ans"+b] = 3;
+k++;
+window[t+"-type"+k] = "image";
+window[t+"-q"+k] = "Cold"; window[t+"-m"+k] = "eng/level1/cold.mp3"; //m is music
+window[t+"-n"+k] = "Cold"; window[t+"-n-m"+k] = "തണുപ്പ്";
+window[t+"-o1"+k] = "ചായ"; window[t+"-l1-"+k] = "/level1/tea.png";
+window[t+"-o2"+k] = "ചൂട്"; window[t+"-l2-"+k] = "/level1/hot.png";
+window[t+"-o3"+k] = "തണുപ്പ്"; window[t+"-l3-"+k] = "/level1/cold.png";
+window[t+"-o4"+k] = "വെള്ളം"; window[t+"-l4-"+k] = "/level1/water.png";
+window[t+"-ans"+k] = 3;
 
-b++;
-window["b-type"+b] = "mcq";
-window["b-q"+b] = "Cold water"; window["b-m"+b] = "eng/level1/cold-water.mp3"; //m is music
-window["b-l"+b] = 6; //how many options are there
-window["b-o1"+b] = "വെള്ളം";
-window["b-o2"+b] = "എൻ്റെ";
-window["b-o3"+b] = "എന്താണ്";
-window["b-o4"+b] = "വലുത്";
-window["b-o5"+b] = "ചൂട്";
-window["b-o6"+b] = "തണുത്ത";
-window["b-ans"+b] = [6,1];
+k++;
+window[t+"-type"+k] = "mcq";
+window[t+"-q"+k] = "Cold water"; window[t+"-m"+k] = "eng/level1/cold-water.mp3"; //m is music
+window[t+"-l"+k] = 6; //how many options are there
+window[t+"-o1"+k] = "വെള്ളം";
+window[t+"-o2"+k] = "എൻ്റെ";
+window[t+"-o3"+k] = "എന്ത്";
+window[t+"-o4"+k] = "വലുത്";
+window[t+"-o5"+k] = "ചൂട്";
+window[t+"-o6"+k] = "തണുപ്പ്";
+window[t+"-ans"+k] = [6,1];
 
-b++;
-window["b-type"+b] = "image";
-window["b-q"+b] = "Hot"; window["b-m"+b] = "eng/level1/hot.mp3"; //m is music
-window["b-n"+b] = "Hot"; window["b-n-m"+b] = "ചൂട്";
-window["b-o1"+b] = "ചായ"; window["b-l1-"+b] = "/level1/tea.png";
-window["b-o2"+b] = "ചൂട്"; window["b-l2-"+b] = "/level1/hot.png";
-window["b-o3"+b] = "തണുപ്പ്"; window["b-l3-"+b] = "/level1/cold.png";
-window["b-o4"+b] = "വെള്ളം"; window["b-l4-"+b] = "/level1/water.png";
-window["b-ans"+b] = 2;
+k++;
+window[t+"-type"+k] = "image";
+window[t+"-q"+k] = "Hot"; window[t+"-m"+k] = "eng/level1/hot.mp3"; //m is music
+window[t+"-n"+k] = "Hot"; window[t+"-n-m"+k] = "ചൂട്";
+window[t+"-o1"+k] = "ചായ"; window[t+"-l1-"+k] = "/level1/tea.png";
+window[t+"-o2"+k] = "ചൂട്"; window[t+"-l2-"+k] = "/level1/hot.png";
+window[t+"-o3"+k] = "തണുപ്പ്"; window[t+"-l3-"+k] = "/level1/cold.png";
+window[t+"-o4"+k] = "വെള്ളം"; window[t+"-l4-"+k] = "/level1/water.png";
+window[t+"-ans"+k] = 2;
 
-b++;
-window["b-type"+b] = "mcq";
-window["b-q"+b] = "Hot water"; window["b-m"+b] = "eng/level1/hot-water.mp3"; //m is music
-window["b-l"+b] = 6; //how many options are there
-window["b-o1"+b] = "വെള്ളം";
-window["b-o2"+b] = "എൻ്റെ";
-window["b-o3"+b] = "എന്താണ്";
-window["b-o4"+b] = "വലുത്";
-window["b-o5"+b] = "ചൂട്";
-window["b-o6"+b] = "തണുത്ത";
-window["b-ans"+b] = [5,1];
+k++;
+window[t+"-type"+k] = "mcq";
+window[t+"-q"+k] = "Hot water"; window[t+"-m"+k] = "eng/level1/hot-water.mp3"; //m is music
+window[t+"-l"+k] = 6; //how many options are there
+window[t+"-o1"+k] = "വെള്ളം";
+window[t+"-o2"+k] = "എൻ്റെ";
+window[t+"-o3"+k] = "എന്ത്";
+window[t+"-o4"+k] = "വലുത്";
+window[t+"-o5"+k] = "ചൂട്";
+window[t+"-o6"+k] = "തണുപ്പ്";
+window[t+"-ans"+k] = [5,1];
 
-b++;
-window["b-type"+b] = "mcq";
-window["b-q"+b] = "Your car and my house"; window["b-m"+b] = "eng/level1/your-car-and-my-house.mp3"; //m is music
-window["b-n"+b] = "and"; window["b-n-m"+b] = "കൂടാതെ"; //n means new words, n-m means new word's meaning
-window["b-l"+b] = 8; //how many options are there
-window["b-o1"+b] = "വീട്";
-window["b-o2"+b] = "ചൂട്";
-window["b-o3"+b] = "നിങ്ങളുടെ";
-window["b-o4"+b] = "എൻ്റെ";
-window["b-o5"+b] = "ചായ";
-window["b-o6"+b] = "കൂടാതെ";
-window["b-o7"+b] = "അവൾ";
-window["b-o8"+b] = "കാർ";
-window["b-ans"+b] = [3,8,6,4,1];
+k++;
+window[t+"-type"+k] = "mcq";
+window[t+"-q"+k] = "Your car and my house"; window[t+"-m"+k] = "eng/level1/your-car-and-my-house.mp3"; //m is music
+window[t+"-n"+k] = "and"; window[t+"-n-m"+k] = "കൂടാതെ"; //n means new words, n-m means new word's meaning
+window[t+"-l"+k] = 8; //how many options are there
+window[t+"-o1"+k] = "വീട്";
+window[t+"-o2"+k] = "ചൂട്";
+window[t+"-o3"+k] = "നിങ്ങളുടെ";
+window[t+"-o4"+k] = "എൻ്റെ";
+window[t+"-o5"+k] = "ചായ";
+window[t+"-o6"+k] = "കൂടാതെ";
+window[t+"-o7"+k] = "അവൻ്റെ";
+window[t+"-o8"+k] = "കാർ";
+window[t+"-ans"+k] = [3,8,6,4,1];
 
-b++;
-window["b-type"+b] = "voice-mcq";
-window["b-q"+b] = "eng/level1/hot-and-cold.mp3"; //file name
-window["b-l"+b] = 7; //how many options are there
-window["b-o1"+b] = "my";
-window["b-o2"+b] = "hot";
-window["b-o3"+b] = "cold";
-window["b-o4"+b] = "her";
-window["b-o5"+b] = "small";
-window["b-o6"+b] = "and";
-window["b-o7"+b] = "tea";
-window["b-ans"+b] = [2,6,3];
+k++;
+window[t+"-type"+k] = "voice-mcq";
+window[t+"-q"+k] = "eng/level1/hot-and-cold.mp3"; //file name
+window[t+"-l"+k] = 7; //how many options are there
+window[t+"-o1"+k] = "my";
+window[t+"-o2"+k] = "hot";
+window[t+"-o3"+k] = "cold";
+window[t+"-o4"+k] = "her";
+window[t+"-o5"+k] = "small";
+window[t+"-o6"+k] = "and";
+window[t+"-o7"+k] = "tea";
+window[t+"-ans"+k] = [2,6,3];
 
-b++;
-window["b-type"+b] = "mcq";
-window["b-q"+b] = "Hot tea"; window["b-m"+b] = "eng/level1/hot-tea.mp3"; //m is music
-window["b-n"+b] = null; window["b-n-m"+b] = null; //n means new word, n-m means new word's meaning
-window["b-l"+b] = 6; //how many options are there
-window["b-o1"+b] = "ചായ";
-window["b-o2"+b] = "വെള്ളം";
-window["b-o3"+b] = "എന്താണ്";
-window["b-o4"+b] = "നിങ്ങളുടെ";
-window["b-o5"+b] = "ചൂട്";
-window["b-o6"+b] = "തണുത്ത";
-window["b-ans"+b] = [5,1];
+k++;
+window[t+"-type"+k] = "mcq";
+window[t+"-q"+k] = "Hot tea"; window[t+"-m"+k] = "eng/level1/hot-tea.mp3"; //m is music
+window[t+"-l"+k] = 6; //how many options are there
+window[t+"-o1"+k] = "ചായ";
+window[t+"-o2"+k] = "വെള്ളം";
+window[t+"-o3"+k] = "എന്ത്";
+window[t+"-o4"+k] = "നിങ്ങളുടെ";
+window[t+"-o5"+k] = "ചൂട്";
+window[t+"-o6"+k] = "തണുപ്പ്";
+window[t+"-ans"+k] = [5,1];
 
-b++;
-window["b-type"+b] = "mcq";
-window["b-q"+b] = "ചൂട് ചായ കൂടാതെ തണുത്ത വെള്ളം"; window["b-m"+b] = null; //m is music
-window["b-n"+b] = "and"; window["b-n-m"+b] = "കൂടാതെ"; //n means new words, n-m means new word's meaning
-window["b-l"+b] = 9; //how many options are there
-window["b-o1"+b] = "your";
-window["b-o2"+b] = "hot";
-window["b-o3"+b] = "name";
-window["b-o4"+b] = "tea";
-window["b-o5"+b] = "big";
-window["b-o6"+b] = "her";
-window["b-o7"+b] = "water";
-window["b-o8"+b] = "cold";
-window["b-o9"+b] = "and";
-window["b-ans"+b] = [2,4,9,8,7];
+k++;
+window[t+"-type"+k] = "mcq";
+window[t+"-q"+k] = "ചൂട് ചായ കൂടാതെ തണുത്ത വെള്ളം"; window[t+"-m"+k] = null; //m is music
+window[t+"-l"+k] = 9; //how many options are there
+window[t+"-o1"+k] = "your";
+window[t+"-o2"+k] = "hot";
+window[t+"-o3"+k] = "name";
+window[t+"-o4"+k] = "tea";
+window[t+"-o5"+k] = "big";
+window[t+"-o6"+k] = "her";
+window[t+"-o7"+k] = "water";
+window[t+"-o8"+k] = "cold";
+window[t+"-o9"+k] = "and";
+window[t+"-ans"+k] = [2,4,9,8,7];
 
-b++;
-window["b-type"+b] = "mcq";
-window["b-q"+b] = "ചൂട് കൂടാതെ തണുപ്പ്"; window["b-m"+b] = null; //m is music
-window["b-l"+b] = 7; //how many options are there
-window["b-o1"+b] = "her";
-window["b-o2"+b] = "name";
-window["b-o3"+b] = "hot";
-window["b-o4"+b] = "my";
-window["b-o5"+b] = "and";
-window["b-o6"+b] = "big";
-window["b-o7"+b] = "cold";
-window["b-ans"+b] = [3,5,7];
+k++;
+window[t+"-type"+k] = "mcq";
+window[t+"-q"+k] = "ചൂട് കൂടാതെ തണുപ്പ്"; window[t+"-m"+k] = null; //m is music
+window[t+"-l"+k] = 7; //how many options are there
+window[t+"-o1"+k] = "her";
+window[t+"-o2"+k] = "name";
+window[t+"-o3"+k] = "hot";
+window[t+"-o4"+k] = "my";
+window[t+"-o5"+k] = "and";
+window[t+"-o6"+k] = "big";
+window[t+"-o7"+k] = "cold";
+window[t+"-ans"+k] = [3,5,7];
 
-b++;
-window["b-type"+b] = "mcq";
-window["b-q"+b] = "എൻ്റെ ചായ ചൂട് ആണ്"; window["b-m"+b] = null; //m is music
-window["b-l"+b] = 8; //how many options are there
-window["b-o1"+b] = "tea";
-window["b-o2"+b] = "house";
-window["b-o3"+b] = "hot";
-window["b-o4"+b] = "is";
-window["b-o5"+b] = "big";
-window["b-o6"+b] = "car";
-window["b-o7"+b] = "my";
-window["b-o8"+b] = "his";
-window["b-ans"+b] = [7,1,4,3];
+k++;
+window[t+"-type"+k] = "mcq";
+window[t+"-q"+k] = "എൻ്റെ ചായ ചൂട് ആണ്"; window[t+"-m"+k] = null; //m is music
+window[t+"-l"+k] = 8; //how many options are there
+window[t+"-o1"+k] = "tea";
+window[t+"-o2"+k] = "house";
+window[t+"-o3"+k] = "hot";
+window[t+"-o4"+k] = "is";
+window[t+"-o5"+k] = "big";
+window[t+"-o6"+k] = "car";
+window[t+"-o7"+k] = "my";
+window[t+"-o8"+k] = "his";
+window[t+"-ans"+k] = [7,1,4,3];
 
-b++;
-window["b-type"+b] = "mcq";
-window["b-q"+b] = "നിങ്ങളുടെ കാർ കൂടാതെ എൻ്റെ വീട്"; window["b-m"+b] = null; //m is music
-window["b-l"+b] = 9; //how many options are there
-window["b-o1"+b] = "house";
-window["b-o2"+b] = "car";
-window["b-o3"+b] = "his";
-window["b-o4"+b] = "my";
-window["b-o5"+b] = "and";
-window["b-o6"+b] = "her";
-window["b-o7"+b] = "cold";
-window["b-o8"+b] = "tea";
-window["b-o9"+b] = "your";
-window["b-ans"+b] = [9,2,5,4,1];
+k++;
+window[t+"-type"+k] = "mcq";
+window[t+"-q"+k] = "നിങ്ങളുടെ കാർ കൂടാതെ എൻ്റെ വീട്"; window[t+"-m"+k] = null; //m is music
+window[t+"-l"+k] = 9; //how many options are there
+window[t+"-o1"+k] = "house";
+window[t+"-o2"+k] = "car";
+window[t+"-o3"+k] = "his";
+window[t+"-o4"+k] = "my";
+window[t+"-o5"+k] = "and";
+window[t+"-o6"+k] = "her";
+window[t+"-o7"+k] = "cold";
+window[t+"-o8"+k] = "tea";
+window[t+"-o9"+k] = "your";
+window[t+"-ans"+k] = [9,2,5,4,1];
 
-c = 0;
+lesson2Total = k;
+k=0;t='c';
 
-c++;
-window["c-type"+c] = "word";
-window["c-q"+c] = "What?"; window["c-m"+c] = "eng/level1/what.mp3"; //m is music
-window["c-n"+c] = "What"; window["c-n-m"+c] = "എന്ത്";
-window["c-o1"+c] = "കൂടാതെ";
-window["c-o2"+c] = "വലുത്";
-window["c-o3"+c] = "എന്ത്";
-window["c-o4"+c] = "നിങ്ങളുടെ";
-window["c-ans"+c] = 3;
+k++;
+window[t+"-type"+k] = "word";
+window[t+"-q"+k] = "What?"; window[t+"-m"+k] = "eng/level1/what.mp3"; //m is music
+window[t+"-n"+k] = "What"; window[t+"-n-m"+k] = "എന്ത്";
+window[t+"-o1"+k] = "കൂടാതെ";
+window[t+"-o2"+k] = "വലുത്";
+window[t+"-o3"+k] = "എന്ത്";
+window[t+"-o4"+k] = "നിങ്ങളുടെ";
+window[t+"-ans"+k] = 3;
 
-c++;
-window["c-type"+c] = "word";
-window["c-q"+c] = "എന്ത്"; window["c-m"+c] = null; //m is music
-window["c-o1"+c] = "what";
-window["c-o2"+c] = "small";
-window["c-o3"+c] = "cold";
-window["c-o4"+c] = "big";
-window["c-ans"+c] = 1;
+k++;
+window[t+"-type"+k] = "word";
+window[t+"-q"+k] = "എന്ത്"; window[t+"-m"+k] = null; //m is music
+window[t+"-o1"+k] = "what";
+window[t+"-o2"+k] = "small";
+window[t+"-o3"+k] = "cold";
+window[t+"-o4"+k] = "big";
+window[t+"-ans"+k] = 1;
 
-c++;
-window["c-type"+c] = "mcq";
-window["c-q"+c] = "Her car"; window["c-m"+c] = "eng/level1/her-car.mp3"; //m is music
-window["c-n"+c] = "Her"; window["c-n-m"+c] = "അവളുടെ";
-window["c-l"+c] = 5; //how many options are there
-window["c-o1"+c] = "ചായ";
-window["c-o2"+c] = "തണുത്ത";
-window["c-o3"+c] = "എൻ്റെ";
-window["c-o4"+c] = "കാർ ";
-window["c-o5"+c] = "അവളുടെ";
-window["c-ans"+c] = [5,4];
+k++;
+window[t+"-type"+k] = "mcq";
+window[t+"-q"+k] = "Her car"; window[t+"-m"+k] = "eng/level1/her-car.mp3"; //m is music
+window[t+"-n"+k] = "Her"; window[t+"-n-m"+k] = "അവളുടെ";
+window[t+"-l"+k] = 5; //how many options are there
+window[t+"-o1"+k] = "ചായ";
+window[t+"-o2"+k] = "തണുപ്പ്";
+window[t+"-o3"+k] = "എൻ്റെ";
+window[t+"-o4"+k] = "കാർ";
+window[t+"-o5"+k] = "അവളുടെ";
+window[t+"-ans"+k] = [5,4];
 
-c++;
-window["c-type"+c] = "word";
-window["c-q"+c] = "അവളുടെ"; window["c-m"+c] = null; //m is music
-window["c-o1"+c] = "house";
-window["c-o2"+c] = "her";
-window["c-o3"+c] = "small";
-window["c-o4"+c] = "my";
-window["c-ans"+c] = 2;
+k++;
+window[t+"-type"+k] = "word";
+window[t+"-q"+k] = "അവളുടെ"; window[t+"-m"+k] = null; //m is music
+window[t+"-o1"+k] = "house";
+window[t+"-o2"+k] = "her";
+window[t+"-o3"+k] = "small";
+window[t+"-o4"+k] = "my";
+window[t+"-ans"+k] = 2;
 
-c++;
-window["c-type"+c] = "word";
-window["c-q"+c] = "അവൻ്റെ"; window["c-m"+c] = null; //m is music
-window["c-n"+c] = "His"; window["c-n-m"+c] = "അവൻ്റെ";
-window["c-o1"+c] = "house";
-window["c-o2"+c] = "his";
-window["c-o3"+c] = "my";
-window["c-o4"+c] = "small";
-window["c-ans"+c] = 2;
+k++;
+window[t+"-type"+k] = "word";
+window[t+"-q"+k] = "അവൻ്റെ"; window[t+"-m"+k] = null; //m is music
+window[t+"-n"+k] = "His"; window[t+"-n-m"+k] = "അവൻ്റെ";
+window[t+"-o1"+k] = "house";
+window[t+"-o2"+k] = "his";
+window[t+"-o3"+k] = "my";
+window[t+"-o4"+k] = "small";
+window[t+"-ans"+k] = 2;
 
-c++;
-window["c-type"+c] = "mcq";
-window["c-q"+c] = "Her tea is hot"; window["c-m"+c] = "eng/level1/her-tea-is-hot.mp3"; //m is music
-window["c-l"+c] = 7; //how many options are there
-window["c-o1"+c] = "ആണ്";
-window["c-o2"+c] = "ചായ";
-window["c-o3"+c] = "ചൂട്";
-window["c-o4"+c] = "കാർ";
-window["c-o5"+c] = "പേര്";
-window["c-o6"+c] = "അവളുടെ";
-window["c-o7"+c] = "വെള്ളം";
-window["c-ans"+c] = [6,2,3,1];
+k++;
+window[t+"-type"+k] = "mcq";
+window[t+"-q"+k] = "Her tea is hot"; window[t+"-m"+k] = "eng/level1/her-tea-is-hot.mp3"; //m is music
+window[t+"-l"+k] = 7; //how many options are there
+window[t+"-o1"+k] = "ആണ്";
+window[t+"-o2"+k] = "ചായ";
+window[t+"-o3"+k] = "ചൂട്";
+window[t+"-o4"+k] = "കാർ";
+window[t+"-o5"+k] = "ആമിർ";
+window[t+"-o6"+k] = "അവളുടെ";
+window[t+"-o7"+k] = "വെള്ളം";
+window[t+"-ans"+k] = [6,2,3,1];
 
-c++;
-window["c-type"+c] = "mcq";
-window["c-q"+c] = "My name"; window["c-m"+c] = "eng/level1/my-name.mp3"; //m is music
-window["c-n"+c] = "name"; window["c-n-m"+c] = "പേര്"; //n means new word, n-m means new word's meaning
-window["c-l"+c] = 7; //how many options are there
-window["c-o1"+c] = "ചൂട്";
-window["c-o2"+c] = "ആണ്";
-window["c-o3"+c] = "ചായ";
-window["c-o4"+c] = "അവൾ";
-window["c-o5"+c] = "എൻ്റെ";
-window["c-o6"+c] = "പേര്";
-window["c-o7"+c] = "വെള്ളം";
-window["c-ans"+c] = [5,6];
+k++;
+window[t+"-type"+k] = "mcq";
+window[t+"-q"+k] = "My name"; window[t+"-m"+k] = "eng/level1/my-name.mp3"; //m is music
+window[t+"-n"+k] = "name"; window[t+"-n-m"+k] = "പേര്"; //n means new word, n-m means new word's meaning
+window[t+"-l"+k] = 7; //how many options are there
+window[t+"-o1"+k] = "ചൂട്";
+window[t+"-o2"+k] = "ആണ്";
+window[t+"-o3"+k] = "ചായ";
+window[t+"-o4"+k] = "അവൻ്റെ";
+window[t+"-o5"+k] = "എൻ്റെ";
+window[t+"-o6"+k] = "പേര്";
+window[t+"-o7"+k] = "വെള്ളം";
+window[t+"-ans"+k] = [5,6];
 
-c++;
-window["c-type"+c] = "word";
-window["c-q"+c] = "പേര്"; window["c-m"+c] = null; //m is music
-window["c-o1"+c] = "small";
-window["c-o2"+c] = "name";
-window["c-o3"+c] = "is";
-window["c-o4"+c] = "cold";
-window["c-ans"+c] = 2;
+k++;
+window[t+"-type"+k] = "word";
+window[t+"-q"+k] = "പേര്"; window[t+"-m"+k] = null; //m is music
+window[t+"-o1"+k] = "small";
+window[t+"-o2"+k] = "name";
+window[t+"-o3"+k] = "is";
+window[t+"-o4"+k] = "cold";
+window[t+"-ans"+k] = 2;
 
-c++;
-window["c-type"+c] = "mcq";
-window["c-q"+c] = "What is her name?"; window["c-m"+c] = "eng/level1/what-is-her-name.mp3"; //m is music
-window["c-l"+c] = 6; //how many options are there
-window["c-o1"+c] = "എന്ത്";
-window["c-o2"+c] = "ചെറുത്";
-window["c-o3"+c] = "ചൂട്";
-window["c-o4"+c] = "അവളുടെ";
-window["c-o5"+c] = "ആണ്";
-window["c-o6"+c] = "പേര്";
-window["c-ans"+c] = [4,6,1,5];
+k++;
+window[t+"-type"+k] = "mcq";
+window[t+"-q"+k] = "What is her name?"; window[t+"-m"+k] = "eng/level1/what-is-her-name.mp3"; //m is music
+window[t+"-l"+k] = 6; //how many options are there
+window[t+"-o1"+k] = "എന്ത്";
+window[t+"-o2"+k] = "ചെറുത്";
+window[t+"-o3"+k] = "ചൂട്";
+window[t+"-o4"+k] = "അവളുടെ";
+window[t+"-o5"+k] = "ആണ്";
+window[t+"-o6"+k] = "പേര്";
+window[t+"-ans"+k] = [4,6,1,5];
 
-c++;
-window["c-type"+c] = "mcq";
-window["c-q"+c] = "His tea is cold"; window["c-m"+c] = "eng/level1/his-tea-is-cold.mp3"; //m is music
-window["c-l"+c] = 8; //how many options are there
-window["c-o1"+c] = "എന്താണ്";
-window["c-o2"+c] = "ആണ്";
-window["c-o3"+c] = "അവൻ്റെ";
-window["c-o4"+c] = "വലുത്";
-window["c-o5"+c] = "തണുപ്പ്";
-window["c-o6"+c] = "ചായ";
-window["c-o7"+c] = "കാർ";
-window["c-o8"+c] = "പേര്";
-window["c-ans"+c] = [3,6,5,2];
+k++;
+window[t+"-type"+k] = "mcq";
+window[t+"-q"+k] = "His tea is cold"; window[t+"-m"+k] = "eng/level1/his-tea-is-cold.mp3"; //m is music
+window[t+"-l"+k] = 8; //how many options are there
+window[t+"-o1"+k] = "എന്ത്";
+window[t+"-o2"+k] = "ആണ്";
+window[t+"-o3"+k] = "അവൻ്റെ";
+window[t+"-o4"+k] = "ചോദിച്ചു";
+window[t+"-o5"+k] = "തണുപ്പ്";
+window[t+"-o6"+k] = "ചായ";
+window[t+"-o7"+k] = "കാർ";
+window[t+"-o8"+k] = "പേര്";
+window[t+"-ans"+k] = [3,6,5,2];
 
-c++;
-window["c-type"+c] = "match";
-window["c-l"+c] = 5; //how many options are there
-window["c-o-l-1"+c] = "ആണ്"; window["c-o-r-1"+c] = "is";
-window["c-o-l-2"+c] = "വെള്ളം"; window["c-o-r-2"+c] = "water";
-window["c-o-l-3"+c] = "വലുത്"; window["c-o-r-3"+c] = "big";
-window["c-o-l-4"+c] = "പേര്"; window["c-o-r-4"+c] = "name";
-window["c-o-l-5"+c] = "വീട്"; window["c-o-r-5"+c] = "house";
+k++;
+window[t+"-type"+k] = "match";
+window[t+"-l"+k] = 5; //how many options are there
+window[t+"-o-l-1"+k] = "ആണ്"; window[t+"-o-r-1"+k] = "is";
+window[t+"-o-l-2"+k] = "വെള്ളം"; window[t+"-o-r-2"+k] = "water";
+window[t+"-o-l-3"+k] = "വലുത്"; window[t+"-o-r-3"+k] = "big";
+window[t+"-o-l-4"+k] = "പേര്"; window[t+"-o-r-4"+k] = "name";
+window[t+"-o-l-5"+k] = "വീട്"; window[t+"-o-r-5"+k] = "house";
 
-c++;
-window["c-type"+c] = "voice-mcq";
-window["c-q"+c] = "eng/level1/his-name-is-john.mp3"; //file name
-window["c-l"+c] = 8; //how many options are there
-window["c-o1"+c] = "his";
-window["c-o2"+c] = "john";
-window["c-o3"+c] = "car";
-window["c-o4"+c] = "small";
-window["c-o5"+c] = "is";
-window["c-o6"+c] = "my";
-window["c-o7"+c] = "house";
-window["c-o8"+c] = "name";
-window["c-ans"+c] = [1,8,5,2];
+k++;
+window[t+"-type"+k] = "voice-mcq";
+window[t+"-q"+k] = "eng/level1/his-name-is-john.mp3"; //file name
+window[t+"-l"+k] = 8; //how many options are there
+window[t+"-o1"+k] = "his";
+window[t+"-o2"+k] = "john";
+window[t+"-o3"+k] = "car";
+window[t+"-o4"+k] = "small";
+window[t+"-o5"+k] = "is";
+window[t+"-o6"+k] = "my";
+window[t+"-o7"+k] = "house";
+window[t+"-o8"+k] = "name";
+window[t+"-ans"+k] = [1,8,5,2];
 
-c++;
-window["c-type"+c] = "mcq";
-window["c-q"+c] = "അവളുടെ പേര്"; window["c-m"+c] = null; //m is music
-window["c-l"+c] = 6; //how many options are there
-window["c-o1"+c] = "name";
-window["c-o2"+c] = "her";
-window["c-o3"+c] = "water";
-window["c-o4"+c] = "house";
-window["c-o5"+c] = "small";
-window["c-o6"+c] = "hot";
-window["c-ans"+c] = [2,1];
+k++;
+window[t+"-type"+k] = "mcq";
+window[t+"-q"+k] = "അവൻ്റെ പേര്"; window[t+"-m"+k] = null; //m is music
+window[t+"-l"+k] = 6; //how many options are there
+window[t+"-o1"+k] = "name";
+window[t+"-o2"+k] = "his";
+window[t+"-o3"+k] = "water";
+window[t+"-o4"+k] = "house";
+window[t+"-o5"+k] = "small";
+window[t+"-o6"+k] = "hot";
+window[t+"-ans"+k] = [2,1];
 
-c++;
-window["c-type"+c] = "mcq";
-window["c-q"+c] = "അവൻ്റെ ചായ തണുപ്പ് ആണ്"; window["c-m"+c] = null; //m is music
-window["c-l"+c] = 8; //how many options are there
-window["c-o1"+c] = "name";
-window["c-o2"+c] = "tea";
-window["c-o3"+c] = "his";
-window["c-o4"+c] = "small";
-window["c-o5"+c] = "is";
-window["c-o6"+c] = "cold";
-window["c-o7"+c] = "car";
-window["c-o8"+c] = "your";
-window["c-ans"+c] = [3,2,5,6];
+k++;
+window[t+"-type"+k] = "mcq";
+window[t+"-q"+k] = "അവളുടെ ചായ തണുത്തത് ആണ്"; window[t+"-m"+k] = null; //m is music
+window[t+"-l"+k] = 8; //how many options are there
+window[t+"-o1"+k] = "name";
+window[t+"-o2"+k] = "tea";
+window[t+"-o3"+k] = "her";
+window[t+"-o4"+k] = "small";
+window[t+"-o5"+k] = "is";
+window[t+"-o6"+k] = "cold";
+window[t+"-o7"+k] = "car";
+window[t+"-o8"+k] = "your";
+window[t+"-ans"+k] = [3,2,5,6];
 
-c++;
-window["c-type"+c] = "mcq";
-window["c-q"+c] = "അവൻ്റെ പേര് ജോൺ ആണ്"; window["c-m"+c] = null; //m is music
-window["c-l"+c] = 8; //how many options are there
-window["c-o1"+c] = "name";
-window["c-o2"+c] = "tea";
-window["c-o3"+c] = "his";
-window["c-o4"+c] = "small";
-window["c-o5"+c] = "is";
-window["c-o6"+c] = "cold";
-window["c-o7"+c] = "car";
-window["c-o8"+c] = "john";
-window["c-ans"+c] = [3,1,5,8];
+k++;
+window[t+"-type"+k] = "mcq";
+window[t+"-q"+k] = "അവൻ്റെ പേര് ജോൺ ആണ്"; window[t+"-m"+k] = null; //m is music
+window[t+"-l"+k] = 8; //how many options are there
+window[t+"-o1"+k] = "name";
+window[t+"-o2"+k] = "tea";
+window[t+"-o3"+k] = "his";
+window[t+"-o4"+k] = "small";
+window[t+"-o5"+k] = "is";
+window[t+"-o6"+k] = "cold";
+window[t+"-o7"+k] = "car";
+window[t+"-o8"+k] = "john";
+window[t+"-ans"+k] = [3,1,5,8];
 
-d = 0;
+lesson3Total = k;
+k=0;t='d';
 
-d++;
-window["d-type"+d] = "word";
-window["d-q"+d] = "വീട്"; window["d-m"+d] = null; //m is music
-window["d-o1"+d] = "car";
-window["d-o2"+d] = "house";
-window["d-o3"+d] = "is";
-window["d-o4"+d] = "name";
-window["d-ans"+d] = 2;
+k++;
+window[t+"-type"+k] = "word";
+window[t+"-q"+k] = "വീട്"; window[t+"-m"+k] = null; //m is music
+window[t+"-o1"+k] = "car";
+window[t+"-o2"+k] = "house";
+window[t+"-o3"+k] = "is";
+window[t+"-o4"+k] = "name";
+window[t+"-ans"+k] = 2;
 
-d++;
-window["d-type"+d] = "mcq";
-window["d-q"+d] = "What is her name"; window["d-m"+d] = "eng/level1/what-is-her-name.mp3"; //m is music
-window["d-l"+d] = 7; //how many options are there
-window["d-o1"+d] = "വലുത്";
-window["d-o2"+d] = "അവളുടെ";
-window["d-o3"+d] = "ചായ";
-window["d-o4"+d] = "പേര്";
-window["d-o5"+d] = "എന്ത്";
-window["d-o6"+d] = "ആണ്";
-window["d-o7"+d] = "വീട്";
-window["d-ans"+d] = [2,4,5,6];
+k++;
+window[t+"-type"+k] = "mcq";
+window[t+"-q"+k] = "What is her name"; window[t+"-m"+k] = "eng/level1/what-is-her-name.mp3"; //m is music
+window[t+"-l"+k] = 7; //how many options are there
+window[t+"-o1"+k] = "വലുത്";
+window[t+"-o2"+k] = "അവളുടെ";
+window[t+"-o3"+k] = "ചായ";
+window[t+"-o4"+k] = "പേര്";
+window[t+"-o5"+k] = "എന്ത്";
+window[t+"-o6"+k] = "ആണ്";
+window[t+"-o7"+k] = "വീട്";
+window[t+"-ans"+k] = [2,4,5,6];
 
-d++;
-window["d-type"+d] = "word";
-window["d-q"+d] = "കാർ"; window["d-m"+d] = null; //m is music
-window["d-o1"+d] = "is";
-window["d-o2"+d] = "your";
-window["d-o3"+d] = "car";
-window["d-o4"+d] = "name";
-window["d-ans"+d] = 3;
+k++;
+window[t+"-type"+k] = "word";
+window[t+"-q"+k] = "കാർ"; window[t+"-m"+k] = null; //m is music
+window[t+"-o1"+k] = "is";
+window[t+"-o2"+k] = "your";
+window[t+"-o3"+k] = "car";
+window[t+"-o4"+k] = "name";
+window[t+"-ans"+k] = 3;
 
-d++;
-window["d-type"+d] = "mcq";
-window["d-q"+d] = "Your water is hot"; window["d-m"+d] = "eng/level1/your-water-is-hot.mp3"; //m is music
-window["d-l"+d] = 7; //how many options are there
-window["d-o1"+d] = "നിൻ്റെ";
-window["d-o2"+d] = "അവൾ";
-window["d-o3"+d] = "ചായ";
-window["d-o4"+d] = "പേര്";
-window["d-o5"+d] = "വെള്ളം";
-window["d-o6"+d] = "ആണ്";
-window["d-o7"+d] = "ചൂട്";
-window["d-ans"+d] = [1,5,7,6];
+k++;
+window[t+"-type"+k] = "mcq";
+window[t+"-q"+k] = "Your water is hot"; window[t+"-m"+k] = "eng/level1/your-water-is-hot.mp3"; //m is music
+window[t+"-l"+k] = 7; //how many options are there
+window[t+"-o1"+k] = "നിങ്ങളുടെ";
+window[t+"-o2"+k] = "അവൻ്റെ";
+window[t+"-o3"+k] = "ചായ";
+window[t+"-o4"+k] = "പേര്";
+window[t+"-o5"+k] = "വെള്ളം";
+window[t+"-o6"+k] = "ആണ്";
+window[t+"-o7"+k] = "ചൂട്";
+window[t+"-ans"+k] = [1,5,7,6];
 
-d++;
-window["d-type"+d] = "word";
-window["d-q"+d] = "എൻ്റെ"; window["d-m"+d] = null; //m is music
-window["d-o1"+d] = "is";
-window["d-o2"+d] = "your";
-window["d-o3"+d] = "car";
-window["d-o4"+d] = "my";
-window["d-ans"+d] = 4;
+k++;
+window[t+"-type"+k] = "word";
+window[t+"-q"+k] = "എൻ്റെ"; window[t+"-m"+k] = null; //m is music
+window[t+"-o1"+k] = "is";
+window[t+"-o2"+k] = "your";
+window[t+"-o3"+k] = "car";
+window[t+"-o4"+k] = "my";
+window[t+"-ans"+k] = 4;
 
-d++;
-window["d-type"+d] = "mcq";
-window["d-q"+d] = "What is his name"; window["d-m"+d] = "eng/level1/what-is-his-name.mp3"; //m is music
-window["d-l"+d] = 7; //how many options are there
-window["d-o1"+d] = "വലുത്";
-window["d-o2"+d] = "അവൻ്റെ";
-window["d-o3"+d] = "ചായ";
-window["d-o4"+d] = "പേര്";
-window["d-o5"+d] = "എന്ത്";
-window["d-o6"+d] = "ആണ്";
-window["d-o7"+d] = "വീട്";
-window["d-ans"+d] = [2,4,5,6];
+k++;
+window[t+"-type"+k] = "mcq";
+window[t+"-q"+k] = "What is his name"; window[t+"-m"+k] = "eng/level1/what-is-his-name.mp3"; //m is music
+window[t+"-l"+k] = 7; //how many options are there
+window[t+"-o1"+k] = "വലുത്";
+window[t+"-o2"+k] = "അവൻ്റെ";
+window[t+"-o3"+k] = "ചായ";
+window[t+"-o4"+k] = "പേര്";
+window[t+"-o5"+k] = "എന്ത്";
+window[t+"-o6"+k] = "ആണ്";
+window[t+"-o7"+k] = "വീട്";
+window[t+"-ans"+k] = [2,4,5,6];
 
-d++;
-window["d-type"+d] = "voice-mcq";
-window["d-q"+d] = "eng/level1/my-house-is-small.mp3"; //file name
-window["d-l"+d] = 7; //how many options are there
-window["d-o1"+d] = "my";
-window["d-o2"+d] = "hot";
-window["d-o3"+d] = "house";
-window["d-o4"+d] = "her";
-window["d-o5"+d] = "small";
-window["d-o6"+d] = "and";
-window["d-o7"+d] = "is";
-window["d-ans"+d] = [1,3,7,5];
+k++;
+window[t+"-type"+k] = "voice-mcq";
+window[t+"-q"+k] = "eng/level1/my-house-is-small.mp3"; //file name
+window[t+"-l"+k] = 7; //how many options are there
+window[t+"-o1"+k] = "my";
+window[t+"-o2"+k] = "hot";
+window[t+"-o3"+k] = "house";
+window[t+"-o4"+k] = "her";
+window[t+"-o5"+k] = "small";
+window[t+"-o6"+k] = "and";
+window[t+"-o7"+k] = "is";
+window[t+"-ans"+k] = [1,3,7,5];
 
-d++;
-window["d-type"+d] = "mcq";
-window["d-q"+d] = "Your car and my house"; window["d-m"+d] = "eng/level1/your-car-and-my-house.mp3"; //m is music
-window["d-l"+d] = 8; //how many options are there
-window["d-o1"+d] = "ചെറുത്";
-window["d-o2"+d] = "എൻ്റെ";
-window["d-o3"+d] = "എന്താണ്";
-window["d-o4"+d] = "കാർ";
-window["d-o5"+d] = "ആണ്";
-window["d-o6"+d] = "നിൻ്റെ";
-window["d-o7"+d] = "വീട്";
-window["d-o8"+d] = "കൂടാതെ";
-window["d-ans"+d] = [6,4,8,2,7];
+k++;
+window[t+"-type"+k] = "mcq";
+window[t+"-q"+k] = "Your car and my house"; window[t+"-m"+k] = "eng/level1/your-car-and-my-house.mp3"; //m is music
+window[t+"-l"+k] = 9; //how many options are there
+window[t+"-o1"+k] = "ചെറുത്";
+window[t+"-o2"+k] = "എൻ്റെ";
+window[t+"-o3"+k] = "എന്ത്";
+window[t+"-o4"+k] = "കാർ";
+window[t+"-o5"+k] = "ആണ്";
+window[t+"-o6"+k] = "നിങ്ങളുടെ";
+window[t+"-o7"+k] = "വീട്";
+window[t+"-o8"+k] = "എൻ്റെ";
+window[t+"-o9"+k] = "കൂടാതെ";
+window[t+"-ans"+k] = [6,4,9,2,7];
 
-d++;
-window["d-type"+d] = "voice-mcq";
-window["d-q"+d] = "eng/level1/his-tea-is-cold.mp3"; //file name
-window["d-l"+d] = 7; //how many options are there
-window["d-o1"+d] = "my";
-window["d-o2"+d] = "hot";
-window["d-o3"+d] = "tea";
-window["d-o4"+d] = "his";
-window["d-o5"+d] = "cold";
-window["d-o6"+d] = "and";
-window["d-o7"+d] = "is";
-window["d-ans"+d] = [4,3,7,5];
+k++;
+window[t+"-type"+k] = "voice-mcq";
+window[t+"-q"+k] = "eng/level1/his-tea-is-cold.mp3"; //file name
+window[t+"-l"+k] = 7; //how many options are there
+window[t+"-o1"+k] = "my";
+window[t+"-o2"+k] = "hot";
+window[t+"-o3"+k] = "tea";
+window[t+"-o4"+k] = "his";
+window[t+"-o5"+k] = "cold";
+window[t+"-o6"+k] = "and";
+window[t+"-o7"+k] = "is";
+window[t+"-ans"+k] = [4,3,7,5];
 
+k++;
+window[t+"-type"+k] = "message";
+window[t+"-ti"+k] = "പഠിച്ച വാക്കുകൾ"; //title
+window[t+"-msg"+k] = "Let see what you have learned so far."; //message
+
+k++;
+window[t+"-type"+k] = "conversation"; xt=0;
+xt++;window[t+"-q"+xt+"-l"+k] = "House"; window[t+"-t"+xt+"-l"+k] = "വീട്"; window[t+"-q"+xt+"-m"+k] = 'eng/level1/house.mp3'; //l=left,r=right q=ques,t=translated, m=music
+xt++;window[t+"-q"+xt+"-l"+k] = "Car"; window[t+"-t"+xt+"-l"+k] = "കാർ"; window[t+"-q"+xt+"-m"+k] = 'eng/level1/car.mp3';
+xt++;window[t+"-q"+xt+"-l"+k] = "My"; window[t+"-t"+xt+"-l"+k] = "എൻ്റെ"; window[t+"-q"+xt+"-m"+k] = 'eng/level1/my.mp3';
+xt++;window[t+"-q"+xt+"-l"+k] = "Your"; window[t+"-t"+xt+"-l"+k] = "നിങ്ങളുടെ/നിൻ്റെ"; window[t+"-q"+xt+"-m"+k] = 'eng/level1/your.mp3';
+xt++;window[t+"-q"+xt+"-l"+k] = "is"; window[t+"-t"+xt+"-l"+k] = "ആണ്"; window[t+"-q"+xt+"-m"+k] = 'eng/level1/is.mp3';
+xt++;window[t+"-q"+xt+"-l"+k] = "big"; window[t+"-t"+xt+"-l"+k] = "വലുത്"; window[t+"-q"+xt+"-m"+k] = 'eng/level1/big.mp3';
+xt++;window[t+"-q"+xt+"-l"+k] = "small"; window[t+"-t"+xt+"-l"+k] = "ചെറുത്"; window[t+"-q"+xt+"-m"+k] = 'eng/level1/small.mp3';
+xt++;window[t+"-q"+xt+"-l"+k] = "Water"; window[t+"-t"+xt+"-l"+k] = "വെള്ളം"; window[t+"-q"+xt+"-m"+k] = 'eng/level1/water.mp3';
+xt++;window[t+"-q"+xt+"-l"+k] = "Tea"; window[t+"-t"+xt+"-l"+k] = "ചായ"; window[t+"-q"+xt+"-m"+k] = 'eng/level1/tea.mp3';
+xt++;window[t+"-q"+xt+"-l"+k] = "Cold"; window[t+"-t"+xt+"-l"+k] = "തണുപ്പ്"; window[t+"-q"+xt+"-m"+k] = 'eng/level1/cold.mp3';
+xt++;window[t+"-q"+xt+"-l"+k] = "Hot"; window[t+"-t"+xt+"-l"+k] = "ചൂട്"; window[t+"-q"+xt+"-m"+k] = 'eng/level1/hot.mp3';
+xt++;window[t+"-q"+xt+"-l"+k] = "and"; window[t+"-t"+xt+"-l"+k] = "കൂടാതെ"; window[t+"-q"+xt+"-m"+k] = 'eng/level1/and.mp3';
+xt++;window[t+"-q"+xt+"-l"+k] = "What"; window[t+"-t"+xt+"-l"+k] = "എന്ത്"; window[t+"-q"+xt+"-m"+k] = 'eng/level1/what.mp3';
+xt++;window[t+"-q"+xt+"-l"+k] = "Her"; window[t+"-t"+xt+"-l"+k] = "അവളുടെ"; window[t+"-q"+xt+"-m"+k] = 'eng/level1/her.mp3';
+xt++;window[t+"-q"+xt+"-l"+k] = "His"; window[t+"-t"+xt+"-l"+k] = "അവൻ്റെ"; window[t+"-q"+xt+"-m"+k] = 'eng/level1/his.mp3';
+xt++;window[t+"-q"+xt+"-l"+k] = "name"; window[t+"-t"+xt+"-l"+k] = "പേര്"; window[t+"-q"+xt+"-m"+k] = 'eng/level1/name.mp3';
+window[t+"-len"+k]=xt;
+
+lesson4Total = k;
