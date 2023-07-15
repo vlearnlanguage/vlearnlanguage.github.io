@@ -298,8 +298,8 @@
 
 
         $(".continue-btn").click(function () {
+            localStorage.fullTotalAns--;
             parent.next();
-            window.parent.crctAns++;
             $(".continue-btn").off();
         });
 

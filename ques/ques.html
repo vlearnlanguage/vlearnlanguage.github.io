@@ -82,6 +82,7 @@
         xp = xpDict[currentLang + "-" + yourLang];
         currentLevel = langDict[currentLang + "-" + yourLang]
         openedLevel = parseInt(localStorage.openedLevel);
+        currentSection=localStorage.currentSection
         lessonDict = JSON.parse(localStorage.lessonDict);
         currentLesson = JSON.parse(lessonDict[currentLang + "-" + yourLang]);
         currentLang = localStorage.currentLang; yourLang = localStorage.yourLang;
@@ -116,18 +117,8 @@
         darkRed = coloDict["darkRed"];
         transparentRed = coloDict["transparentRed"];
 
-        crctDict = JSON.parse(localStorage.getItem(currentLang + "-" + yourLang + "-crct"));
-        totalDict = JSON.parse(localStorage.getItem(currentLang + "-" + yourLang + "-total"));
-
-        if (totalDict == null) {
-            localStorage.setItem(currentLang + "-" + yourLang + "-total", '{"1":0}');
-            totalDict = JSON.parse(localStorage.getItem(currentLang + "-" + yourLang + "-total"));
-        }
-        if (crctDict == null) {
-            localStorage.setItem(currentLang + "-" + yourLang + "-crct", '{"1":0}');
-            crctDict = JSON.parse(localStorage.getItem(currentLang + "-" + yourLang + "-crct"));
-        }
-
+        crctDict = JSON.parse(localStorage.getItem(currentLang + "-" + yourLang + "-crct"+currentSection));
+        console.log('crctDict',crctDict);
         localStorage.fullTotalAns = 0;
 
         function checkAppendStr() {
@@ -144,6 +135,7 @@
 
         crctAns = 0;
         localStorage.totalLesson = totalLesson;
+        console.log('totalLesson',totalLesson)
         //wrongAns = 0; 
 
         function fillBar() {
@@ -173,12 +165,10 @@
                 console.log("crctAns", crctAns);
                 console.log("currentLevel", currentLevel);
                 console.log("totalLesson", totalLesson);
-                console.log("totalDict[currentLevel]", totalDict[currentLevel]);
                 if (localStorage.quiz != null) { //jump level is running
 
                     if (crctAns == totalLesson) {
                         console.log("crctAns", crctAns);
-                        console.log("totalDict[currentLevel]", totalDict[currentLevel]);
                         console.log("Progressed to new level")
                         langDict[currentLang + "-" + yourLang] = parseInt(localStorage.quiz);
                         lessonDict[currentLang + "-" + yourLang] = 2;
@@ -188,7 +178,6 @@
                         localStorage.canSync += 2;
                         location.replace("result.html");
                         console.log("CrctAns is", crctAns)
-                        console.log("totalAns is", totalDict[currentLevel])
                         localStorage.addedXp = 10;
                     } else {
                         //failed to pass
@@ -226,8 +215,9 @@
                         //unlock new level and store on server
                         currentLevel++; localStorage.canSync += 2;
                         langDict[currentLang + "-" + yourLang] = currentLevel;
-                        crctDict[currentLevel] = 0; localStorage.setItem(currentLang + "-" + yourLang + "-crct", JSON.stringify(crctDict));
-                        totalDict[currentLevel] = 0; localStorage.setItem(currentLang + "-" + yourLang + "-total", JSON.stringify(totalDict));
+                        console.log('currentLevel',currentLevel);
+                        console.log('crctDict',crctDict);
+                        crctDict[currentLevel] = [0,0]; localStorage.setItem(currentLang + "-" + yourLang + "-crct"+currentSection, JSON.stringify(crctDict));
                         localStorage.setItem("langDict", JSON.stringify(langDict));
                         currentLesson = 1;
                         lessonDict[currentLang + "-" + yourLang] = currentLesson;

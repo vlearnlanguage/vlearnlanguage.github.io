@@ -9,7 +9,7 @@
     <title>Home - vLearn</title>
     <script>
         // add lesson count number each time new lesson create
-        lessonCount = { 1: 4, 2: 4, 3: 4, 4: 3, 5: 4, 6: 4, 7: 4, 8: 4, 9: 4, }
+        lessonCount = { 1: 4, 2: 4, 3: 4, 4: 3, 5: 4, 6: 4, 7: 4, 8: 4, 9: 4, 10: 4, 11: 4, 12: 4, }
     </script>
     <style>
         @font-face {
@@ -612,28 +612,197 @@
             <div class="error-txt">*unknown error occured</div>
         </div>
     </div>
+    <script>
+        langDict = JSON.parse(localStorage.langDict);
+        lessonDict = JSON.parse(localStorage.lessonDict);
+        currentLang = localStorage.currentLang; yourLang = localStorage.yourLang;
+        xpDict = JSON.parse(localStorage.xpDict);
+        xp = xpDict[currentLang + "-" + yourLang];
+
+        currentLang = localStorage.currentLang;
+        yourLang = localStorage.yourLang;
+
+        currentLevel = langDict[currentLang + "-" + yourLang];
+        currentLesson = lessonDict[currentLang + "-" + yourLang];
+
+        section2Limit = 3; //when currentLevel reaches this level, section 2 will unlock
+        section3Limit = 5; //when currentLevel reaches this level, section 3 will unlock
+        if (currentLevel > section2Limit) {
+            maxSection = 2; //maxSection tells what is the maximum section unlocked
+        } else if (currentLevel > section3Limit) {
+            maxSection = 3;
+        } else {
+            maxSection = 1;
+        }
+        currentSection = 1; //Change ths in future
+        localStorage.currentSection = parseInt(currentSection);
+        localStorage.maxSection = parseInt(maxSection);
+        console.log('currentSection', currentSection);
+
+        if (currentSection == 2) {
+            $("#sec2").css({ backgroundColor: '#1cb0f6' });
+            $("#sec2 .section-ct").css({ color: '#fff' });
+            $("#sec2 .section-ct .btn").text('OPEN');
+        } else if (currentSection == 3) {
+            $("#sec2").css({ backgroundColor: '#1cb0f6' });
+            $("#sec2 .section-ct").css({ color: '#fff' });
+            $("#sec2 .section-ct .btn").text('OPEN');
+
+            $("#sec3").css({ backgroundColor: '#ff87d1' });
+            $("#sec3 .section-ct").css({ color: '#fff' });
+            $("#sec3 .section-ct .btn").text('OPEN');
+        }
+
+        _crctDict = JSON.parse(localStorage.getItem(currentLang + "-" + yourLang + "-crct" + currentSection));
+        // _crctDict[2]=[0,0];
+        // // console.log(_crctDict);
+        if (_crctDict == null) {
+            localStorage.setItem(currentLang + "-" + yourLang + "-crct" + currentSection, '{"1":[0,0]}');
+            _crctDict = JSON.parse(localStorage.getItem(currentLang + "-" + yourLang + "-crct" + currentSection));
+        }
+        _crctDict = JSON.parse(localStorage.getItem(currentLang + "-" + yourLang + "-crct" + currentSection));
+
+        setTimeout(() => {
+            location.replace("#ct" + currentLevel);
+        }, 1000);
+
+        $(".change").click(function () {
+            setTimeout(() => {
+                $(".section-con").css({ transform: 'translateX(0)' });
+            }, 400);
+        });
+
+        // if (localStorage.sectionSelected == null) {
+        //     $(".section-con").css({ left: '0%' });
+        // }
+
+        $(".xp").text(xp + " XP");
+        tmpXp = 0;
+        _len = Object.keys(xpDict).length;
+        for (i = 0; i < _len; i++) {
+            tmpXp += Object.values(xpDict)[i];
+        }
+        $(".pts").text(tmpXp + " Pts");
+
+        var colorDict = {
+            "green": "#0b8e02",
+            "darkGreen": '#055107',
+            "transparentGreen": '#06bc0694',
+            "red": '#b91111',
+            "darkRed": '#620101',
+            "transparentRed": '#cd2020d9'
+        };
+        if (localStorage.colorDict == null)
+            localStorage.setItem("colorDict", JSON.stringify(colorDict));
+
+        function langTxt(index) {
+            if (index == "eng") return "English";
+            else if (index == "hin") return "Hindi";
+            else if (index == "tam") return "Tamil";
+            else if (index == "mal") return "Malayalam";
+        }
+
+        localStorage.lessonCount = JSON.stringify(lessonCount);
+        $(".top-txt").append(`${langTxt(currentLang)} > ${langTxt(yourLang)}`);
+
+        appendingLevel = 0;
+        unitCount = 1;
+
+        localStorage.removeItem("quiz");
+        localStorage.removeItem("quizWon");
+        function unitClick(unitLevel) {
+            localStorage.select_unit = unitLevel;
+            setTimeout(() => { window.parent.location = "word.html"; }, 200);
+        }
+        function unitAppend(str) {
+            $(".lesson-bg").append(`<div class="unit-bg"><div class="unit-txt">Unit ${unitCount}</div><div class="unit-des">${str}</div><img src="res/image/note.png" class="unit-img" onclick="unitClick(${unitCount})"></div>`); unitCount++;
+        }
+        function jumpAppend() {
+            if (appendingLevel >= currentLevel)
+                return $(".lesson-bg").append(`<div class="jump-ct jump-ct-${unitCount - 1}" onclick="localStorage.quiz=${appendingLevel + 1}; jumpClickFunc(${appendingLevel + 1})"><img src="res/image/skip.svg" class="lock-img"></div>`);
+        }
+        function ctAppend() {
+            unitAppend("Making simple sentences, describing people");
+            for (i = 1; i <= 3; i++) { appendingLevel++; $(".lesson-bg").append(`<div class="les-bg" id="ct${appendingLevel}" onclick='clickFunc(${appendingLevel}); localStorage.select_unit=${unitCount - 1};'></div>`); checkAppend(); }
+
+            unitAppend("To confirm, knowledge of the house");
+            jumpAppend()
+            for (i = 1; i <= 3; i++) { appendingLevel++; $(".lesson-bg").append(`<div class="les-bg" id="ct${appendingLevel}" onclick='clickFunc(${appendingLevel}); localStorage.select_unit=${unitCount - 1};'></div>`); checkAppend(); }
+
+            unitAppend("About Animals, About Numbers");
+            jumpAppend()
+            for (i = 1; i <= 3; i++) { appendingLevel++; $(".lesson-bg").append(`<div class="les-bg" id="ct${appendingLevel}" onclick='clickFunc(${appendingLevel}); localStorage.select_unit=${unitCount - 1};'></div>`); checkAppend(); }
+
+            unitAppend("About Fruits, About People");
+            jumpAppend()
+            for (i = 1; i <= 3; i++) { appendingLevel++; $(".lesson-bg").append(`<div class="les-bg" id="ct${appendingLevel}" onclick='clickFunc(${appendingLevel}); localStorage.select_unit=${unitCount - 1};'></div>`); checkAppend(); }
+
+        }
+        ctAppend();
+
+        function clickFunc(clickedLevel) {
+            if (clickedLevel <= currentLevel) {
+                //Proceed to level
+                localStorage.openedLevel = clickedLevel;
+                parent.location = "ques/ques.html";
+            }
+        }
+        function jumpClickFunc(clickedLevel) {
+            //opened a jump level
+            localStorage.openedLevel = clickedLevel;
+            parent.location = "ques/ques.html";
+        }
+
+
+        function checkAppend() {
+            if (appendingLevel > currentLevel) {
+                $("#ct" + appendingLevel).append("<img src='res/image/lock.png' class='lock-img'>");
+            }
+            if (appendingLevel < currentLevel) {
+                percent_ = ((_crctDict[appendingLevel][0] / _crctDict[appendingLevel][1]) * 100).toFixed(0);
+                if (isNaN(percent_))
+                    percent_ = 0;
+                $("#ct" + appendingLevel).append(`<img src="res/image/tick.svg" class="lock-img tick${appendingLevel}"> <div class="percent-txt">${percent_}%</div`);
+                if (percent_ == 100) {
+                    $("#ct" + appendingLevel).css({ backgroundColor: '#01a80c', boxShadow: '0px 4px #01620b' });
+                    $(".tick" + appendingLevel).attr('src', 'res/image/white-tick.svg');
+                }
+            }
+            if (currentLevel == appendingLevel) {
+                $("#ct" + currentLevel).append(`<div class="less-txt"><span>${currentLesson}</span>/<span>${lessonCount[appendingLevel]}</span></div>`);
+            }
+        }
+
+        $(".settings-nav").click(function () {
+            $(".logout-txt").css({ visibility: 'visible' });
+            $(".con").css({ transform: 'translateX(-200vw)' });
+            setTimeout(() => { $(".settings-con").css({ transform: 'translateX(0%)' }); }, 300);
+        });
+        $(".home-nav").click(function () {
+            $(".logout-txt").css({ visibility: 'hidden' });
+            $(".con").css({ transform: 'translateX(-200vw)' });
+            setTimeout(() => { $(".level-con").css({ transform: 'translateX(0%)' }); }, 300);
+        });
+        $(".leader-nav").click(function () {
+            setTimeout(() => { parent.location = "leaderboard.html"; }, 300);
+        });
+        $(".alphabet-nav").click(function () {
+            $(".logout-txt").css({ visibility: 'hidden' });
+            $(".con").css({ transform: 'translateX(-200vw)' });
+            setTimeout(() => { $(".alphabet-con").css({ transform: 'translateX(0%)' }); }, 300);
+        });
+
+    </script>
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
         import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
         import { getDatabase, ref, onValue, set } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 
-        currentLang = localStorage.currentLang;
-        yourLang = localStorage.yourLang;
-
-        _crctDict = JSON.parse(localStorage.getItem(currentLang + "-" + yourLang + "-crct"));
-        _totalDict = JSON.parse(localStorage.getItem(currentLang + "-" + yourLang + "-total"));
-
-        if (_totalDict == null) {
-            localStorage.setItem(currentLang + "-" + yourLang + "-total", '{"1":0}');
-            _totalDict = JSON.parse(localStorage.getItem(currentLang + "-" + yourLang + "-total"));
-        }
-        if (_crctDict == null) {
-            localStorage.setItem(currentLang + "-" + yourLang + "-crct", '{"1":0}');
-            _crctDict = JSON.parse(localStorage.getItem(currentLang + "-" + yourLang + "-crct"));
-        }
-
-        _crctDict = JSON.parse(localStorage.getItem(currentLang + "-" + yourLang + "-crct"));
-        _totalDict = JSON.parse(localStorage.getItem(currentLang + "-" + yourLang + "-total"));
+        var courseChangeSync = localStorage.courseChangeSync;
+        var levelChangeSync = localStorage.levelChangeSync;
+        var crct1ChangeSync = localStorage.crct1ChangeSync;
+        var crct2ChangeSync = localStorage.crct2ChangeSync;
+        var crct3ChangeSync = localStorage.crct3ChangeSync;
 
         function initialiseFirebase(type) {
             const firebaseConfig = {
@@ -669,102 +838,94 @@
         }
 
         function syncData(type) {
-            if (type == "storeOnly") {
-                const db = getDatabase();
-                console.log(db);
+            const db = getDatabase();
+            console.log(db);
+            if (courseChangeSync > 1 || localStorage.firstSync == null) {
                 set(ref(db, 'users/' + localStorage.uid + '/i'), {
                     cl: localStorage.currentLang,
                     yl: localStorage.yourLang
-                })
+                }).then(() => {
+                    // Data saved successfully!
+                    console.log("courseChangeSync Saved Successfully");
+                    courseChangeSync = 0;
+                    localStorage.courseChangeSync = 0;
+                }).catch((error) => {
+                    // The write failed...
+                    console.log('courseChangeSync Error:', error);
+                });
+            }
+            if (levelChangeSync > 1 || localStorage.firstSync == null) {
                 set(ref(db, 'users/' + localStorage.uid + '/j'), {
                     laD: localStorage.langDict,
                     leD: localStorage.lessonDict
                 })
                 set(ref(db, 'users/' + localStorage.uid + '/xp'), {
                     xp: localStorage.xpDict,
-                })
-                setTimeout(() => {
-                    console.log(localStorage.currentLang);
-
-                    console.log(_crctDict);
-                    set(ref(db, 'users/' + localStorage.uid + '/k/' + currentLang + "-" + yourLang), {
-                        crct: JSON.stringify(_crctDict),
-                        total: JSON.stringify(_totalDict)
-                    })
-                        .then(() => {
-                            // Data saved successfully!
-                            console.log("Saved Successfully");
-                            localStorage.firstSync = "done";
-                            localStorage.canSync = 0;
-                        })
-                        .catch((error) => {
-                            // The write failed...
-                            console.log(error);
-                        });
-
-                }, 1000);
-            } else if (type == "signout") {
-                if (localStorage.canSync > 0) {
-                    const db = getDatabase();
-                    console.log(db);
-                    set(ref(db, 'users/' + localStorage.uid + '/i'), {
-                        cl: localStorage.currentLang,
-                        yl: localStorage.yourLang
-                    })
-                    set(ref(db, 'users/' + localStorage.uid + '/j'), {
-                        laD: localStorage.langDict,
-                        leD: localStorage.lessonDict
-                    })
-                    set(ref(db, 'users/' + localStorage.uid + '/xp'), {
-                        xp: localStorage.xpDict,
-                    })
-                    if (localStorage.currentLang + "-" + yourLang + "-crct" == null) {
-                        _crctDict = { "1": 0 }; localStorage.setItem(currentLang + "-" + yourLang + "-crct", JSON.stringify(_crctDict));
-                        _totalDict = { "1": 0 }; localStorage.setItem(currentLang + "-" + yourLang + "-total", JSON.stringify(_totalDict));
+                }).then(() => {
+                    // Data saved successfully!
+                    console.log("levelChangeSync Saved Successfully");
+                    levelChangeSync = 0;
+                    localStorage.levelChangeSync = 0;
+                }).catch((error) => {
+                    // The write failed...
+                    console.log('levelChangeSync Error:', error);
+                });
+            }
+            if (crct1ChangeSync > 1 || localStorage.firstSync == null) {
+                set(ref(db, 'users/' + localStorage.uid + '/k/' + currentLang + "-" + yourLang + 1), {
+                    crct: JSON.stringify(_crctDict),
+                }).then(() => {
+                    // Data saved successfully!
+                    console.log("crct1ChangeSync Saved Successfully");
+                    crct1ChangeSync = 0;
+                    localStorage.crct1ChangeSync = 0;
+                }).catch((error) => {
+                    // The write failed...
+                    console.log('crct1ChangeSync Error:', error);
+                });
+            }
+            if (crct2ChangeSync > 1 || localStorage.firstSync == null) {
+                set(ref(db, 'users/' + localStorage.uid + '/k/' + currentLang + "-" + yourLang + 2), {
+                    crct: JSON.stringify(_crctDict),
+                }).then(() => {
+                    // Data saved successfully!
+                    console.log("crct2ChangeSync Saved Successfully");
+                    crct2ChangeSync = 0;
+                    localStorage.crct2ChangeSync = 0;
+                }).catch((error) => {
+                    // The write failed...
+                    console.log('crct2ChangeSync Error:', error);
+                });
+            }
+            if (crct3ChangeSync > 1 || localStorage.firstSync == null) {
+                set(ref(db, 'users/' + localStorage.uid + '/k/' + currentLang + "-" + yourLang + 3), {
+                    crct: JSON.stringify(_crctDict),
+                }).then(() => {
+                    // Data saved successfully!
+                    console.log("crct3ChangeSync Saved Successfully");
+                    crct3ChangeSync = 0;
+                    localStorage.crct3ChangeSync = 0;
+                    if (localStorage.firstSync==null){
+                        localStorage.firstSync='done';
                     }
-
-                    _crctDict = JSON.parse(localStorage.getItem(localStorage.currentLang + "-" + localStorage.yourLang + "-crct"));
-                    _totalDict = JSON.parse(localStorage.getItem(localStorage.currentLang + "-" + localStorage.yourLang + "-total"));
-                    console.log(_crctDict);
-                    set(ref(db, 'users/' + localStorage.uid + '/k/' + localStorage.currentLang + "-" + localStorage.yourLang), {
-                        crct: JSON.stringify(_crctDict),
-                        total: JSON.stringify(_totalDict)
-                    })
-                        .then(() => {
-                            // Data saved successfully!
-                            console.log("Saved Successfully");
-                            localStorage.firstSync = "done";
-                            localStorage.canSync = 0;
-                            const auth = getAuth();
-                            signOut(auth).then(() => {
-                                // Sign-out successful.
-                                localStorage.clear();
-                                location.replace("login.html");
-                            }).catch((error) => {
-                                // An error happened.
-                                console.log(error);
-                                $(".error-txt").fadeIn();
-                            });
-                        })
-                        .catch((error) => {
-                            // The write failed...
-                            console.log(error);
-                        });
-                } else {
-                    const auth = getAuth();
-                    signOut(auth).then(() => {
-                        // Sign-out successful.
-                        localStorage.clear();
-                        location.replace("login.html");
-                    }).catch((error) => {
-                        // An error happened.
-                        console.log(error);
-                        $(".error-txt").fadeIn();
-                    });
-                }
-
+                }).catch((error) => {
+                    // The write failed...
+                    console.log('crct3ChangeSync Error:', error);
+                });
             }
 
+            if (type == "signout") {
+                const auth = getAuth();
+                signOut(auth).then(() => {
+                    // Sign-out successful.
+                    localStorage.clear();
+                    location.replace("login.html");
+                }).catch((error) => {
+                    // An error happened.
+                    console.log(error);
+                    $(".error-txt").fadeIn();
+                });
+            }
         }
 
         if (localStorage.canSync == null) localStorage.canSync = 0;
@@ -781,193 +942,6 @@
         $(".logout-btn").click(function () {
             initialiseFirebase("signout");
         });
-    </script>
-    <script>
-        langDict = JSON.parse(localStorage.langDict);
-        lessonDict = JSON.parse(localStorage.lessonDict);
-        currentLang = localStorage.currentLang; yourLang = localStorage.yourLang;
-        xpDict = JSON.parse(localStorage.xpDict);
-        xp = xpDict[currentLang + "-" + yourLang];
-
-        currentLevel = langDict[currentLang + "-" + yourLang];
-        currentLesson = lessonDict[currentLang + "-" + yourLang];
-
-        currentLang = localStorage.currentLang;
-        yourLang = localStorage.yourLang;
-
-        _crctDict = JSON.parse(localStorage.getItem(currentLang + "-" + yourLang + "-crct"));
-        _totalDict = JSON.parse(localStorage.getItem(currentLang + "-" + yourLang + "-total"));
-
-        if (_totalDict == null) {
-            localStorage.setItem(currentLang + "-" + yourLang + "-total", '{"1":0}');
-            _totalDict = JSON.parse(localStorage.getItem(currentLang + "-" + yourLang + "-total"));
-        }
-        if (_crctDict == null) {
-            localStorage.setItem(currentLang + "-" + yourLang + "-crct", '{"1":0}');
-            _crctDict = JSON.parse(localStorage.getItem(currentLang + "-" + yourLang + "-crct"));
-        }
-
-        _crctDict = JSON.parse(localStorage.getItem(currentLang + "-" + yourLang + "-crct"));
-        _totalDict = JSON.parse(localStorage.getItem(currentLang + "-" + yourLang + "-total"));
-
-        section2Limit = 3; //when currentLevel reaches this level, section 2 will unlock
-        section3Limit = 5; //when currentLevel reaches this level, section 3 will unlock
-        if (currentLevel > section2Limit) {
-            maxSection = 2; //maxSection tells what is the maximum section unlocked
-        } else if (currentLevel > section3Limit) {
-            maxSection = 3;
-        } else {
-            maxSection = 1;
-        }
-        localStorage.maxSection = parseInt(maxSection)
-        console.log('maxSection', maxSection);
-
-        if (maxSection == 2) {
-            $("#sec2").css({ backgroundColor: '#1cb0f6' });
-            $("#sec2 .section-ct").css({ color: '#fff' });
-            $("#sec2 .section-ct .btn").text('OPEN');
-        } else if (maxSection == 3) {
-            $("#sec2").css({ backgroundColor: '#1cb0f6' });
-            $("#sec2 .section-ct").css({ color: '#fff' });
-            $("#sec2 .section-ct .btn").text('OPEN');
-
-            $("#sec3").css({ backgroundColor: '#ff87d1' });
-            $("#sec3 .section-ct").css({ color: '#fff' });
-            $("#sec3 .section-ct .btn").text('OPEN');
-        }
-
-        location.replace("#ct" + currentLevel);
-
-        $(".change").click(function () {
-            setTimeout(() => {
-                $(".section-con").css({ transform: 'translateX(0)' });
-            }, 400);
-        });
-
-        // if (localStorage.sectionSelected == null) {
-        //     $(".section-con").css({ left: '0%' });
-        // }
-
-        $(".xp").text(xp + " XP");
-        tmpXp = 0;
-        _len = Object.keys(xpDict).length;
-        for (i = 0; i < _len; i++) {
-            tmpXp += Object.values(xpDict)[i];
-        }
-        $(".pts").text(tmpXp + " Pts");
-
-        var colorDict = {
-            "green": "#0b8e02",
-            "darkGreen": '#055107',
-            "transparentGreen": '#06bc0694',
-            "red": '#b91111',
-            "darkRed": '#620101',
-            "transparentRed": '#cd2020d9'
-        };
-        if (localStorage.colorDict == null)
-            localStorage.setItem("colorDict", JSON.stringify(colorDict));
-
-        function langTxt(index) {
-            if (index == "eng") return "English";
-            if (index == "hin") return "Hindi";
-            if (index == "tam") return "Tamil";
-            if (index == "mal") return "Malayalam";
-        }
-
-        localStorage.lessonCount = JSON.stringify(lessonCount);
-        $(".top-txt").append(`${langTxt(currentLang)} > ${langTxt(yourLang)}`);
-
-        appendingLevel = 0;
-        unitCount = 1;
-
-        localStorage.removeItem("quiz");
-        localStorage.removeItem("quizWon");
-        function unitClick(unitLevel) {
-            localStorage.select_unit = unitLevel;
-            setTimeout(() => { window.parent.location = "word.html"; }, 200);
-        }
-        function unitAppend(str) {
-            $(".lesson-bg").append(`<div class="unit-bg"><div class="unit-txt">Unit ${unitCount}</div><div class="unit-des">${str}</div><img src="res/image/note.png" class="unit-img" onclick="unitClick(${unitCount})"></div>`); unitCount++;
-        }
-        function jumpAppend() {
-            if (appendingLevel >= currentLevel)
-                return $(".lesson-bg").append(`<div class="jump-ct jump-ct-${unitCount - 1}" onclick="localStorage.quiz=${appendingLevel + 1}; jumpClickFunc(${appendingLevel + 1})"><img src="res/image/skip.svg" class="lock-img"></div>`);
-        }
-        function ctAppend() {
-            unitAppend("Making simple sentences, describing people");
-            for (i = 1; i <= 3; i++) { appendingLevel++; $(".lesson-bg").append(`<div class="les-bg" id="ct${appendingLevel}" onclick='clickFunc(${appendingLevel}); localStorage.select_unit=${unitCount - 1};'></div>`); checkAppend(); }
-
-            unitAppend("To confirm, knowledge of the house");
-            jumpAppend()
-            for (i = 1; i <= 3; i++) { appendingLevel++; $(".lesson-bg").append(`<div class="les-bg" id="ct${appendingLevel}" onclick='clickFunc(${appendingLevel}); localStorage.select_unit=${unitCount - 1};'></div>`); checkAppend(); }
-
-            unitAppend("About Animals, About Numbers");
-            jumpAppend()
-            for (i = 1; i <= 3; i++) { appendingLevel++; $(".lesson-bg").append(`<div class="les-bg" id="ct${appendingLevel}" onclick='clickFunc(${appendingLevel}); localStorage.select_unit=${unitCount - 1};'></div>`); checkAppend(); }
-
-            // unitAppend("Form the sentences, words");
-            // jumpAppend()
-            // for (i=1; i<=5; i++) {appendingLevel++; $(".lesson-bg").append(`<div class="les-bg" id="ct${appendingLevel}" onclick='clickFunc(${appendingLevel})'></div>`);checkAppend();}
-
-            // unitAppend("Form the sentences, words");
-            // jumpAppend()
-            // for (i=1; i<=6; i++) {appendingLevel++; $(".lesson-bg").append(`<div class="les-bg" id="ct${appendingLevel}" onclick='clickFunc(${appendingLevel})'></div>`);checkAppend();}
-
-        }
-        ctAppend();
-
-        function clickFunc(clickedLevel) {
-            if (clickedLevel <= currentLevel) {
-                //Proceed to level
-                localStorage.openedLevel = clickedLevel;
-                parent.location = "ques/ques.html";
-            }
-        }
-        function jumpClickFunc(clickedLevel) {
-            //opened a jump level
-            localStorage.openedLevel = clickedLevel;
-            parent.location = "ques/ques.html";
-        }
-
-
-        function checkAppend() {
-            if (appendingLevel > currentLevel) {
-                $("#ct" + appendingLevel).append("<img src='res/image/lock.png' class='lock-img'>");
-            }
-            if (appendingLevel < currentLevel) {
-                percent_ = ((_crctDict[appendingLevel] / _totalDict[appendingLevel]) * 100).toFixed(0);
-                if (isNaN(percent_))
-                    percent_ = 0;
-                $("#ct" + appendingLevel).append(`<img src="res/image/tick.svg" class="lock-img tick${appendingLevel}"> <div class="percent-txt">${percent_}%</div`);
-                if (percent_ == 100) {
-                    $("#ct" + appendingLevel).css({ backgroundColor: '#01a80c', boxShadow: '0px 4px #01620b' });
-                    $(".tick" + appendingLevel).attr('src', 'res/image/white-tick.svg');
-                }
-            }
-            if (currentLevel == appendingLevel) {
-                $("#ct" + currentLevel).append(`<div class="less-txt"><span>${currentLesson}</span>/<span>${lessonCount[appendingLevel]}</span></div>`);
-            }
-        }
-
-        $(".settings-nav").click(function () {
-            $(".logout-txt").css({ visibility: 'visible' });
-            $(".con").css({ transform: 'translateX(-200vw)' });
-            setTimeout(() => { $(".settings-con").css({ transform: 'translateX(0%)' }); }, 300);
-        });
-        $(".home-nav").click(function () {
-            $(".logout-txt").css({ visibility: 'hidden' });
-            $(".con").css({ transform: 'translateX(-200vw)' });
-            setTimeout(() => { $(".level-con").css({ transform: 'translateX(0%)' }); }, 300);
-        });
-        $(".leader-nav").click(function () {
-            setTimeout(() => { parent.location = "leaderboard.html"; }, 300);
-        });
-        $(".alphabet-nav").click(function () {
-            $(".logout-txt").css({ visibility: 'hidden' });
-            $(".con").css({ transform: 'translateX(-200vw)' });
-            setTimeout(() => { $(".alphabet-con").css({ transform: 'translateX(0%)' }); }, 300);
-        });
-
     </script>
 </body>
 
