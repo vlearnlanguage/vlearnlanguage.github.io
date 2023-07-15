@@ -588,13 +588,13 @@ window[t+"-ti"+k] = "പഠിച്ച വാക്കുകൾ"; //title
 window[t+"-msg"+k] = "Let see what you have learned new words."; //message
 
 k++;
-window[t+"-type"+k] = "conversation"; k=0;t='a';
-k++;window[t+"-q"+k+"-l"+k] = "Girl"; window[t+"-t"+k+"-l"+k] = "लड़की"; window[t+"-q"+k+"-m"+k] = 'eng/level1/house.mp3'; //l=left,r=right q=ques,t=translated, m=music
-k++;window[t+"-q"+k+"-l"+k] = "Student"; window[t+"-t"+k+"-l"+k] = "छात्र"; window[t+"-q"+k+"-m"+k] = 'eng/level1/house.mp3';
-k++;window[t+"-q"+k+"-l"+k] = "boy"; window[t+"-t"+k+"-l"+k] = "लड़का"; window[t+"-q"+k+"-m"+k] = 'eng/level1/house.mp3';
-k++;window[t+"-q"+k+"-l"+k] = "a"; window[t+"-t"+k+"-l"+k] = "एक"; window[t+"-q"+k+"-m"+k] = 'eng/level1/house.mp3';
-k++;window[t+"-q"+k+"-l"+k] = "I"; window[t+"-t"+k+"-l"+k] = "मैं"; window[t+"-q"+k+"-m"+k] = 'eng/level1/house.mp3';
-k++;window[t+"-q"+k+"-l"+k] = "am"; window[t+"-t"+k+"-l"+k] = "हूं"; window[t+"-q"+k+"-m"+k] = 'eng/level1/house.mp3';
-window[t+"-len"+k]=a;
+window[t+"-type"+k] = "conversation"; xt=0;
+xt++;window[t+"-q"+xt+"-l"+k] = "Girl"; window[t+"-t"+xt+"-l"+k] = "लड़की"; window[t+"-q"+xt+"-m"+k] = 'eng/level2/girl.mp3'; //l=left,r=right q=ques,t=translated, m=music
+xt++;window[t+"-q"+xt+"-l"+k] = "Student"; window[t+"-t"+xt+"-l"+k] = "छात्र"; window[t+"-q"+xt+"-m"+k] = 'eng/level2/student.mp3';
+xt++;window[t+"-q"+xt+"-l"+k] = "boy"; window[t+"-t"+xt+"-l"+k] = "लड़का"; window[t+"-q"+xt+"-m"+k] = 'eng/level2/boy.mp3';
+xt++;window[t+"-q"+xt+"-l"+k] = "a"; window[t+"-t"+xt+"-l"+k] = "एक"; window[t+"-q"+xt+"-m"+k] = 'eng/level2/a.mp3';
+xt++;window[t+"-q"+xt+"-l"+k] = "I"; window[t+"-t"+xt+"-l"+k] = "मैं"; window[t+"-q"+xt+"-m"+k] = 'eng/level2/i.mp3';
+xt++;window[t+"-q"+xt+"-l"+k] = "am"; window[t+"-t"+xt+"-l"+k] = "हूं"; window[t+"-q"+xt+"-m"+k] = 'eng/level2/am.mp3';
+window[t+"-len"+k]=xt;
 
 lesson4Total = k;

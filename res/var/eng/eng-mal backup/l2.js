@@ -1,4 +1,4 @@
-//Unit 1 [Old Words]{Memory Test}
+//Lesson1
 
 k=0;t='a';
 
@@ -37,10 +37,10 @@ window[t+"-q"+k] = "My student"; window[t+"-m"+k] = "eng/level2/my-student.mp3";
 window[t+"-l"+k] = 6; //how many options are there
 window[t+"-o1"+k] = "അവൻ";
 window[t+"-o2"+k] = "വിദ്യാർത്ഥി";
-window[t+"-o3"+k] = "തണുപ്പ്";
+window[t+"-o3"+k] = "തണുത്ത";
 window[t+"-o4"+k] = "എൻ്റെ";
-window[t+"-o5"+k] = "നിങ്ങളുടെ";
-window[t+"-o6"+k] = "എന്ത്";
+window[t+"-o5"+k] = "താങ്കളുടെ";
+window[t+"-o6"+k] = "എന്താണ്";
 window[t+"-ans"+k] = [4,2];
 
 k++;
@@ -72,9 +72,9 @@ window[t+"-n"+k] = "a"; window[t+"-n-m"+k] = "ഒരു"; //n means new words, n
 window[t+"-l"+k] = 6; //how many options are there
 window[t+"-o1"+k] = "അവൻ";
 window[t+"-o2"+k] = "വിദ്യാർത്ഥി";
-window[t+"-o3"+k] = "തണുപ്പ്";
+window[t+"-o3"+k] = "തണുത്ത";
 window[t+"-o4"+k] = "ഒരു";
-window[t+"-o5"+k] = "നിങ്ങളുടെ";
+window[t+"-o5"+k] = "താങ്കളുടെ";
 window[t+"-o6"+k] = "ആൺകുട്ടി";
 window[t+"-ans"+k] = [4,6];
 
@@ -90,7 +90,7 @@ window[t+"-o4"+k] = "ഒരു";
 window[t+"-o5"+k] = "ഇന്ത്യ";
 window[t+"-o6"+k] = "ഞാൻ";
 window[t+"-o7"+k] = "സ്ത്രീ";
-window[t+"-o8"+k] = "നിങ്ങളുടെ";
+window[t+"-o8"+k] = "താങ്കളുടെ";
 window[t+"-ans"+k] = [6,4,1,2];
 
 k++;
@@ -115,7 +115,7 @@ k++;
 window[t+"-type"+k] = "match";
 window[t+"-l"+k] = 5; //how many options are there
 window[t+"-o-l-1"+k] = "പെൺകുട്ടി"; window[t+"-o-r-1"+k] = "girl";
-window[t+"-o-l-2"+k] = "നിങ്ങളുടെ"; window[t+"-o-r-2"+k] = "your";
+window[t+"-o-l-2"+k] = "നിൻ്റെ"; window[t+"-o-r-2"+k] = "your";
 window[t+"-o-l-3"+k] = "വെള്ളം"; window[t+"-o-r-3"+k] = "water";
 window[t+"-o-l-4"+k] = "ചായ"; window[t+"-o-r-4"+k] = "tea";
 window[t+"-o-l-5"+k] = "പേര്"; window[t+"-o-r-5"+k] = "name";
@@ -163,6 +163,7 @@ window[t+"-o8"+k] = "am";
 window[t+"-ans"+k] = [3,8,2,6];
 
 
+
 lesson1Total = k;
 k=0;t='b';
 
@@ -187,7 +188,7 @@ window[t+"-o3"+k] = "നിന്ന്";
 window[t+"-o4"+k] = "ആണ്";
 window[t+"-o5"+k] = "വീട്";
 window[t+"-o6"+k] = "പേര്";
-window[t+"-o7"+k] = "അവൻ്റെ";
+window[t+"-o7"+k] = "അവൾ";
 window[t+"-o8"+k] = "വിദ്യാർത്ഥി";
 window[t+"-o9"+k] = "ഒരു";
 window[t+"-ans"+k] = [2,8,1,3,4];
@@ -198,7 +199,7 @@ window[t+"-q"+k] = "I am from delhi"; window[t+"-m"+k] = "eng/level2/i-am-from-d
 window[t+"-n"+k] = "delhi"; window[t+"-n-m"+k] = "ഡൽഹി"; //n means new words, n-m means new word's meaning
 window[t+"-l"+k] = 7; //how many options are there
 window[t+"-o1"+k] = "പുരുഷൻ";
-window[t+"-o2"+k] = "നിങ്ങളുടെ";
+window[t+"-o2"+k] = "നിൻ്റെ";
 window[t+"-o3"+k] = "നിന്ന്";
 window[t+"-o4"+k] = "ആണ്";
 window[t+"-o5"+k] = "ഞാൻ";
@@ -218,10 +219,10 @@ window[t+"-ans"+k] = 2;
 k++;
 window[t+"-type"+k] = "mcq";
 window[t+"-q"+k] = "You are from india"; window[t+"-m"+k] = "eng/level2/you-are-from-india.mp3"; //m is music
-window[t+"-n"+k] = "you : നിങ്ങൾ  , നീ"; window[t+"-n-m"+k] = "are: ആണ്"; //n means new words, n-m means new word's meaning
+window[t+"-n"+k] = "you : നിങ്ങൾ / നീ"; window[t+"-n-m"+k] = "are: ആണ്"; //n means new words, n-m means new word's meaning
 window[t+"-l"+k] = 7; //how many options are there
 window[t+"-o1"+k] = "ഇന്ത്യയിൽ";
-window[t+"-o2"+k] = "നിങ്ങളുടെ";
+window[t+"-o2"+k] = "നിൻ്റെ";
 window[t+"-o3"+k] = "ഒരു";
 window[t+"-o4"+k] = "നിങ്ങൾ";
 window[t+"-o5"+k] = "ആണ്";
@@ -273,18 +274,18 @@ window[t+"-o1"+k] = "ഇന്ത്യയിൽ";
 window[t+"-o2"+k] = "ഡൽഹി";
 window[t+"-o3"+k] = "വിദ്യാർത്ഥി";
 window[t+"-o4"+k] = "നിന്ന്";
-window[t+"-o5"+k] = "ആണോ?";
+window[t+"-o5"+k] = "ആണ്";
 window[t+"-o6"+k] = "സ്ത്രീ";
 window[t+"-o7"+k] = "നിങ്ങൾ";
-window[t+"-o8"+k] = "എന്ത്";
-window[t+"-ans"+k] = [7,1,4,5];
+window[t+"-o8"+k] = "ആണോ?";
+window[t+"-ans"+k] = [7,1,4,8];
 
 k++;
 window[t+"-type"+k] = "mcq";
 window[t+"-q"+k] = "You are happy"; window[t+"-m"+k] = "eng/level2/you-are-happy.mp3"; //m is music
 window[t+"-n"+k] = "happy"; window[t+"-n-m"+k] = "സന്തോഷം"; //n means new words, n-m means new word's meaning
 window[t+"-l"+k] = 7; //how many options are there
-window[t+"-o1"+k] = "നിങ്ങളുടെ";
+window[t+"-o1"+k] = "നിൻ്റെ";
 window[t+"-o2"+k] = "സ്ത്രീ";
 window[t+"-o3"+k] = "ആണ്";
 window[t+"-o4"+k] = "കൂടാതെ";
@@ -392,11 +393,11 @@ window[t+"-q"+k] = "He is a man"; window[t+"-m"+k] = "eng/level2/he-is-a-man.mp3
 window[t+"-n"+k] = "he"; window[t+"-n-m"+k] = "അവൻ"; //n means new words, n-m means new word's meaning
 window[t+"-l"+k] = 8; //how many options are there
 window[t+"-o1"+k] = "പുരുഷൻ";
-window[t+"-o2"+k] = "അവൻ്റെ";
+window[t+"-o2"+k] = "അവൾ";
 window[t+"-o3"+k] = "ഞാൻ";
 window[t+"-o4"+k] = "ആണ്";
 window[t+"-o5"+k] = "ഒരു";
-window[t+"-o6"+k] = "എന്ത്";
+window[t+"-o6"+k] = "എന്താണ്";
 window[t+"-o7"+k] = "അവൻ";
 window[t+"-o8"+k] = "എൻ്റെ";
 window[t+"-ans"+k] = [7,5,1,4];
@@ -406,11 +407,11 @@ window[t+"-type"+k] = "mcq";
 window[t+"-q"+k] = "He is a boy"; window[t+"-m"+k] = "eng/level2/he-is-a-boy.mp3"; //m is music
 window[t+"-l"+k] = 8; //how many options are there
 window[t+"-o1"+k] = "ആൺകുട്ടി";
-window[t+"-o2"+k] = "അവൻ്റെ";
+window[t+"-o2"+k] = "അവൾ";
 window[t+"-o3"+k] = "ഞാൻ";
 window[t+"-o4"+k] = "ആണ്";
 window[t+"-o5"+k] = "ഒരു";
-window[t+"-o6"+k] = "എന്ത്";
+window[t+"-o6"+k] = "എന്താണ്";
 window[t+"-o7"+k] = "അവൻ";
 window[t+"-o8"+k] = "എൻ്റെ";
 window[t+"-ans"+k] = [7,5,1,4];
@@ -444,14 +445,14 @@ window[t+"-q"+k] = "She is a girl"; window[t+"-m"+k] = "eng/level2/she-is-a-girl
 window[t+"-n"+k] = "she"; window[t+"-n-m"+k] = "അവൾ"; //n means new words, n-m means new word's meaning
 window[t+"-l"+k] = 8; //how many options are there
 window[t+"-o1"+k] = "ആൺകുട്ടി";
-window[t+"-o2"+k] = "അവൻ്റെ";
+window[t+"-o2"+k] = "അവൾ";
 window[t+"-o3"+k] = "ഞാൻ";
 window[t+"-o4"+k] = "ആണ്";
 window[t+"-o5"+k] = "ഒരു";
-window[t+"-o6"+k] = "എന്ത്";
-window[t+"-o7"+k] = "അവൾ";
+window[t+"-o6"+k] = "എന്താണ്";
+window[t+"-o7"+k] = "അവൻ";
 window[t+"-o8"+k] = "പെൺകുട്ടി";
-window[t+"-ans"+k] = [7,5,8,4];
+window[t+"-ans"+k] = [2,5,8,4];
 
 k++;
 window[t+"-type"+k] = "word";
@@ -500,7 +501,7 @@ window[t+"-o8"+k] = "man";
 window[t+"-ans"+k] = [1,6,2,8];
 
 lesson3Total = k;
-k=0;t='d';
+k=0;t='d';t='d';
 
 k++;
 window[t+"-type"+k] = "word";
@@ -521,7 +522,7 @@ window[t+"-o3"+k] = "നിന്ന്";
 window[t+"-o4"+k] = "ആണ്";
 window[t+"-o5"+k] = "ഒരു";
 window[t+"-o6"+k] = "സ്ത്രീ";
-window[t+"-o7"+k] = "അശ്വതി";
+window[t+"-o7"+k] = "പരിധിയില്ലാത്ത";
 window[t+"-o8"+k] = "അവൾ";
 window[t+"-ans"+k] = [8,2,3,4];
 
@@ -561,7 +562,7 @@ window[t+"-l"+k] = 8; //how many options are there
 window[t+"-o1"+k] = "കൂടാതെ";
 window[t+"-o2"+k] = "ആണ്";
 window[t+"-o3"+k] = "ഒരു";
-window[t+"-o4"+k] = "ആണ്";
+window[t+"-o4"+k] = "അവൻ";
 window[t+"-o5"+k] = "നിന്ന്";
 window[t+"-o6"+k] = "പുരുഷൻ";
 window[t+"-o7"+k] = "ആൺകുട്ടി";
@@ -578,23 +579,6 @@ window[t+"-o3"+k] = "നിന്ന്";
 window[t+"-o4"+k] = "ആണ്";
 window[t+"-o5"+k] = "ഒരു";
 window[t+"-o6"+k] = "സ്ത്രീ";
-window[t+"-o7"+k] = "അശ്വതി";
+window[t+"-o7"+k] = "പരിധിയില്ലാത്ത";
 window[t+"-o8"+k] = "അവൻ";
 window[t+"-ans"+k] = [8,2,3,4];
-
-k++;
-window[t+"-type"+k] = "message";
-window[t+"-ti"+k] = "പഠിച്ച വാക്കുകൾ"; //title
-window[t+"-msg"+k] = "നിങ്ങൾ പഠിച്ച പുതിയ വാക്കുകൾ എന്താണ് നോക്കാം."; //message
-
-k++;
-window[t+"-type"+k] = "conversation"; xt=0;
-xt++;window[t+"-q"+xt+"-l"+k] = "Girl"; window[t+"-t"+xt+"-l"+k] = "പെൺകുട്ടി"; window[t+"-q"+xt+"-m"+k] = 'eng/level2/girl.mp3'; //l=left,r=right q=ques,t=translated, m=music
-xt++;window[t+"-q"+xt+"-l"+k] = "Student"; window[t+"-t"+xt+"-l"+k] = "വിദ്യാർത്ഥി"; window[t+"-q"+xt+"-m"+k] = 'eng/level2/student.mp3';
-xt++;window[t+"-q"+xt+"-l"+k] = "boy"; window[t+"-t"+xt+"-l"+k] = "ആൺകുട്ടി"; window[t+"-q"+xt+"-m"+k] = 'eng/level2/boy.mp3';
-xt++;window[t+"-q"+xt+"-l"+k] = "a"; window[t+"-t"+xt+"-l"+k] = "ഒരു"; window[t+"-q"+xt+"-m"+k] = 'eng/level2/a.mp3';
-xt++;window[t+"-q"+xt+"-l"+k] = "I"; window[t+"-t"+xt+"-l"+k] = "ഞാൻ"; window[t+"-q"+xt+"-m"+k] = 'eng/level2/i.mp3';
-xt++;window[t+"-q"+xt+"-l"+k] = "am"; window[t+"-t"+xt+"-l"+k] = "ആണ്"; window[t+"-q"+xt+"-m"+k] = 'eng/level2/am.mp3';
-window[t+"-len"+k]=xt;
-
-lesson4Total = k;

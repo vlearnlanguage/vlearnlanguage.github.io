@@ -622,7 +622,7 @@ window[t+"-ans"+k] = [1,3,7,5];
 k++;
 window[t+"-type"+k] = "mcq";
 window[t+"-q"+k] = "Your car and my house"; window[t+"-m"+k] = "eng/level1/your-car-and-my-house.mp3"; //m is music
-window[t+"-l"+k] = 9; //how many options are there
+window[t+"-l"+k] = 8; //how many options are there
 window[t+"-o1"+k] = "छोटा";
 window[t+"-o2"+k] = "मेरा";
 window[t+"-o3"+k] = "क्या";
@@ -630,9 +630,8 @@ window[t+"-o4"+k] = "गाड़ी";
 window[t+"-o5"+k] = "है";
 window[t+"-o6"+k] = "तुम्हारी";
 window[t+"-o7"+k] = "घर";
-window[t+"-o8"+k] = "मेरी";
-window[t+"-o9"+k] = "और";
-window[t+"-ans"+k] = [6,4,9,2,7];
+window[t+"-o8"+k] = "और";
+window[t+"-ans"+k] = [6,4,8,2,7];
 
 k++;
 window[t+"-type"+k] = "voice-mcq";

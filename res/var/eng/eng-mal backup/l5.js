@@ -1,4 +1,4 @@
-//Unit 2 [Old Words]{Memory Test}
+//Exercise Level
 
 k=0;t='a';
 
@@ -19,7 +19,7 @@ window[t+"-ans"+k] = [8,6,4,5,9];
 
 k++;
 window[t+"-type"+k] = "mcq";
-window[t+"-q"+k] = "അവൻ ദുഃഖിതന് ആണ്"; window[t+"-m"+k] = null; //m is music
+window[t+"-q"+k] = "അവൻ ദുഃഖിതനാണ്"; window[t+"-m"+k] = null; //m is music
 window[t+"-l"+k] = 9; //how many options are there
 window[t+"-o1"+k] = "I";
 window[t+"-o2"+k] = "am";
@@ -34,7 +34,7 @@ window[t+"-ans"+k] = [3,7,9];
 
 k++;
 window[t+"-type"+k] = "word";
-window[t+"-q"+k] = "അല്ല"; window[t+"-m"+k] = null; //m is music
+window[t+"-q"+k] = "ഇല്ല"; window[t+"-m"+k] = null; //m is music
 window[t+"-o1"+k] = "bye";
 window[t+"-o2"+k] = "fine";
 window[t+"-o3"+k] = "no";
@@ -68,17 +68,17 @@ window[t+"-ans"+k] = [2,3,1,4];
 
 k++;
 window[t+"-type"+k] = "mcq";
-window[t+"-q"+k] = "Good morning, how are you?"; window[t+"-m"+k] = "eng/level4/good-morning-how-are-you.mp3"; //m is music
+window[t+"-q"+k] = "Good morning, how are you"; window[t+"-m"+k] = "eng/level4/good-morning-how-are-you.mp3"; //m is music
 window[t+"-l"+k] = 4; //how many options are there
-window[t+"-o1"+k] = "ആണോ?";   
-window[t+"-o2"+k] = "സുഖം";
-window[t+"-o3"+k] = "സുപ്രഭാതം";
+window[t+"-o1"+k] = "ഉണ്ട്";    
+window[t+"-o2"+k] = "എങ്ങനെ";
+window[t+"-o3"+k] = "നല്ല പ്രഭാതം,";
 window[t+"-o4"+k] = "നിങ്ങൾക്ക്";
 window[t+"-ans"+k] = [3,4,2,1];
 
 k++;
 window[t+"-type"+k] = "mcq";
-window[t+"-q"+k] = "ഞാൻ ദുഃഖിതൻ അല്ല"; window[t+"-m"+k] = null; //m is music
+window[t+"-q"+k] = "ഞാൻ ദുഖിതന് അല്ല"; window[t+"-m"+k] = null; //m is music
 window[t+"-l"+k] = 9; //how many options are there
 window[t+"-o1"+k] = "I";
 window[t+"-o2"+k] = "am";
@@ -93,7 +93,7 @@ window[t+"-ans"+k] = [1,2,7,9];
 
 k++;
 window[t+"-type"+k] = "mcq";
-window[t+"-q"+k] = "എൻ്റെ കാർ വലുത് ആണ്"; window[t+"-m"+k] = null; //m is music
+window[t+"-q"+k] = "എൻ്റെ കാർ വലുതാണ്"; window[t+"-m"+k] = null; //m is music
 window[t+"-l"+k] = 9; //how many options are there
 window[t+"-o1"+k] = "I";
 window[t+"-o2"+k] = "big";
@@ -118,7 +118,7 @@ window[t+"-ans"+k] = [1];
 
 k++;
 window[t+"-type"+k] = "mcq";
-window[t+"-q"+k] = "ഞാൻ ഒരു വിദ്യാർത്ഥി ആണ്"; window[t+"-m"+k] = null; //m is music
+window[t+"-q"+k] = "ഞാൻ ഒരു വിദ്യാർത്ഥിയാണ്"; window[t+"-m"+k] = null; //m is music
 window[t+"-l"+k] = 8; //how many options are there
 window[t+"-o1"+k] = "woman";
 window[t+"-o2"+k] = "student";
@@ -132,20 +132,20 @@ window[t+"-ans"+k] = [4,7,8,2];
 
 k++;
 window[t+"-type"+k] = "mcq";
-window[t+"-q"+k] = "അല്ല, നന്ദി"; window[t+"-m"+k] = null; //m is music
+window[t+"-q"+k] = "ഇല്ല, നന്ദി"; window[t+"-m"+k] = null; //m is music
 window[t+"-l"+k] = 7; //how many options are there
 window[t+"-o1"+k] = "you";
 window[t+"-o2"+k] = "sad";
 window[t+"-o3"+k] = "good morning";
 window[t+"-o4"+k] = "good night";
 window[t+"-o5"+k] = "thank";
-window[t+"-o6"+k] = "no";
+window[t+"-o6"+k] = "no,";
 window[t+"-o7"+k] = "bye";
 window[t+"-ans"+k] = [6,5,1];
 
 k++;
 window[t+"-type"+k] = "mcq";
-window[t+"-q"+k] = "ചൂട് ചായ കൂടാതെ തണുത്ത വെള്ളം"; window[t+"-m"+k] = null; //m is music
+window[t+"-q"+k] = "ചൂടുള്ള ചായ കൂടാതെ തണുത്ത വെള്ളം"; window[t+"-m"+k] = null; //m is music
 window[t+"-l"+k] = 5; //how many options are there
 window[t+"-o1"+k] = "water";
 window[t+"-o2"+k] = "cold";
@@ -159,7 +159,7 @@ k=0;t='b';
 
 k++;
 window[t+"-type"+k] = "mcq";
-window[t+"-q"+k] = "ഞാൻ ഒരു പെൺകുട്ടി ആണ്"; window[t+"-m"+k] = null; //m is music
+window[t+"-q"+k] = "ഞാൻ ഒരു പെൺകുട്ടിയാണ്"; window[t+"-m"+k] = null; //m is music
 window[t+"-l"+k] = 4; //how many options are there
 window[t+"-o1"+k] = "am";
 window[t+"-o2"+k] = "girl";
@@ -180,7 +180,7 @@ window[t+"-ans"+k] = [5,3];
 
 k++;
 window[t+"-type"+k] = "mcq";
-window[t+"-q"+k] = "എൻ്റെ വിദ്യാർത്ഥി ഇന്ത്യയിൽ നിന്ന് ആണ്"; window[t+"-m"+k] = null; //m is music
+window[t+"-q"+k] = "എൻ്റെ വിദ്യാർത്ഥി ഇന്ത്യയിൽ നിന്നാണ്."; window[t+"-m"+k] = null; //m is music
 window[t+"-l"+k] = 5; //how many options are there
 window[t+"-o1"+k] = "india";
 window[t+"-o2"+k] = "is";
@@ -191,7 +191,7 @@ window[t+"-ans"+k] = [3,5,2,4,1];
 
 k++;
 window[t+"-type"+k] = "mcq";
-window[t+"-q"+k] = "നേഹ ഒരു സ്ത്രീ ആണ്"; window[t+"-m"+k] = null; //m is music
+window[t+"-q"+k] = "നേഹ ഒരു സ്ത്രീയാണ്."; window[t+"-m"+k] = null; //m is music
 window[t+"-l"+k] = 8; //how many options are there
 window[t+"-o1"+k] = "boy";
 window[t+"-o2"+k] = "is";
@@ -243,27 +243,8 @@ window[t+"-o5"+k] = "?";
 window[t+"-ans"+k] = [1,3,2,4,5];
 
 k++;
-window[t+"-type"+k] = "word";
-window[t+"-q"+k] = "Hello"; window[t+"-m"+k] = "eng/level4/hello.mp3"; //m is music
-window[t+"-n"+k] = "Hello"; window[t+"-n-m"+k] = "നമസ്കാരം"; //n means new words, n-m means new word's meaning
-window[t+"-o1"+k] = "ഞാൻ";
-window[t+"-o2"+k] = "നമസ്കാരം";
-window[t+"-o3"+k] = "സുപ്രഭാതം";
-window[t+"-o4"+k] = "നന്ദി";
-window[t+"-ans"+k] = 2;
-
-k++;
-window[t+"-type"+k] = "word";
-window[t+"-q"+k] = "നമസ്കാരം"; window[t+"-m"+k] = null; //m is music
-window[t+"-o1"+k] = "Hello";
-window[t+"-o2"+k] = "I";
-window[t+"-o3"+k] = "Good morning";
-window[t+"-o4"+k] = "How";
-window[t+"-ans"+k] = 1;
-
-k++;
 window[t+"-type"+k] = "mcq";
-window[t+"-q"+k] = "നമസ്കാരം, ഞാൻ നേഹ ആണ്"; window[t+"-m"+k] = null; //m is music
+window[t+"-q"+k] = "ഹലോ, ഞാൻ നേഹ ആണ്"; window[t+"-m"+k] = null; //m is music
 window[t+"-l"+k] = 4; //how many options are there
 window[t+"-o1"+k] = "I";
 window[t+"-o2"+k] = "Neha";
@@ -273,7 +254,7 @@ window[t+"-ans"+k] = [4,1,3,2];
 
 k++;
 window[t+"-type"+k] = "mcq";
-window[t+"-q"+k] = "നിങ്ങൾ സന്തോഷവാന് ആണ്"; window[t+"-m"+k] = null; //m is music
+window[t+"-q"+k] = "നിങ്ങൾ സന്തോഷവാൻ ആണ്"; window[t+"-m"+k] = null; //m is music
 window[t+"-l"+k] = 7; //how many options are there
 window[t+"-o1"+k] = "happy";
 window[t+"-o2"+k] = "am";
@@ -302,15 +283,16 @@ window[t+"-type"+k] = "mcq";
 window[t+"-q"+k] = "Yes, I am a boy"; window[t+"-m"+k] = "eng/level5/yes-i-am-a-boy.mp3"; //m is music
 x=0;
 x++;window[t+"-o1"+k] = "ഒരു";
-x++;window[t+"-o2"+k] = "ആണ്";
+x++;window[t+"-o2"+k] = "എന്ത്";
 x++;window[t+"-o3"+k] = "ഡൽഹി";
 x++;window[t+"-o4"+k] = "അതെ";
 x++;window[t+"-o5"+k] = "ഞാൻ";
 x++;window[t+"-o6"+k] = "ആൺകുട്ടി";
 x++;window[t+"-o7"+k] = "പുരുഷൻ";
 x++;window[t+"-o8"+k] = "നിങ്ങൾ";
+x++;window[t+"-o9"+k] = "ആണ്";
 window[t+"-l"+k] = x; //how many options are there
-window[t+"-ans"+k] = [4,5,1,6,2];
+window[t+"-ans"+k] = [4,5,1,6,9];
 
 k++;
 window[t+"-type"+k] = "word";
@@ -340,7 +322,7 @@ k=0;t='d';
 
 k++;
 window[t+"-type"+k] = "mcq";
-window[t+"-q"+k] = "നമസ്കാരം, നിങ്ങൾക്ക് സുഖം ആണോ?"; window[t+"-m"+k] = null; //m is music
+window[t+"-q"+k] = "ഹലോ, നിങ്ങൾക്ക് സുഖം ആണോ?"; window[t+"-m"+k] = null; //m is music
 window[t+"-l"+k] = 5; //how many options are there
 window[t+"-o1"+k] = "are";
 window[t+"-o2"+k] = "?";
@@ -365,7 +347,7 @@ window[t+"-ans"+k] = [4,1,3,6,2];
 
 k++;
 window[t+"-type"+k] = "mcq";
-window[t+"-q"+k] = "ഞാൻ ഇന്ത്യയിൽ നിന്ന് അല്ല."; window[t+"-m"+k] = null; //m is music
+window[t+"-q"+k] = "ഞാൻ ഇന്ത്യയിൽ നിന്ന് അല്ല"; window[t+"-m"+k] = null; //m is music
 window[t+"-l"+k] = 9; //how many options are there
 window[t+"-o1"+k] = "am";
 window[t+"-o2"+k] = "from";
@@ -380,7 +362,7 @@ window[t+"-ans"+k] = [9,1,8,2,4];
 
 k++;
 window[t+"-type"+k] = "mcq";
-window[t+"-q"+k] = "അവളുടെ ചായ തണുത്തത് ആണ്"; window[t+"-m"+k] = null; //m is music
+window[t+"-q"+k] = "അവൻ്റെ ചായ തണുത്തതാണ്."; window[t+"-m"+k] = null; //m is music
 window[t+"-l"+k] = 9; //how many options are there
 window[t+"-o1"+k] = "tea";
 window[t+"-o2"+k] = "from";
@@ -395,7 +377,7 @@ window[t+"-ans"+k] = [4,1,8,3];
 
 k++;
 window[t+"-type"+k] = "mcq";
-window[t+"-q"+k] = "അവൾ ഒരു പെണ്കുട്ടി ആണ്"; window[t+"-m"+k] = null; //m is music
+window[t+"-q"+k] = "അവൾ ഒരു പെൺകുട്ടി ആണ്"; window[t+"-m"+k] = null; //m is music
 window[t+"-l"+k] = 6; //how many options are there
 window[t+"-o1"+k] = "is";
 window[t+"-o2"+k] = "she";
@@ -407,7 +389,7 @@ window[t+"-ans"+k] = [2,1,5,3];
 
 k++;
 window[t+"-type"+k] = "mcq";
-window[t+"-q"+k] = "അല്ല, നന്ദി"; window[t+"-m"+k] = null; //m is music
+window[t+"-q"+k] = "ഇല്ല, നന്ദി"; window[t+"-m"+k] = null; //m is music
 window[t+"-l"+k] = 7; //how many options are there
 window[t+"-o1"+k] = "yes";
 window[t+"-o2"+k] = "no,";
@@ -420,7 +402,7 @@ window[t+"-ans"+k] = [2,6,7];
 
 k++;
 window[t+"-type"+k] = "mcq";
-window[t+"-q"+k] = "നിങ്ങളുടെ വിദ്യാർത്ഥി സന്തോഷവാന് ആണ്"; window[t+"-m"+k] = null; //m is music
+window[t+"-q"+k] = "നിങ്ങളുടെ വിദ്യാർത്ഥി സന്തോഷവാനാണ്"; window[t+"-m"+k] = null; //m is music
 window[t+"-l"+k] = 7; //how many options are there
 window[t+"-o1"+k] = "house";
 window[t+"-o2"+k] = "student";
@@ -431,4 +413,12 @@ window[t+"-o6"+k] = "how";
 window[t+"-o7"+k] = "happy";
 window[t+"-ans"+k] = [4,2,5,7];
 
-lesson4Total = k;
+
+
+
+
+
+
+
+
+

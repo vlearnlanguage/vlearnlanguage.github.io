@@ -442,17 +442,17 @@ window[t+"-ti"+k] = "Excercise"; //title
 window[t+"-msg"+k] = "Let's revise the chapters"; //message
 
 k++;
-window[t+"-type"+k] = "conversation"; k=0;t='a';
-k++;window[t+"-q"+k+"-l"+k] = "What is your name?"; window[t+"-t"+k+"-l"+k] = "तुम्हारा नाम क्या है?"; window[t+"-q"+k+"-m"+k] = 'eng/level1/house.mp3'; //l=left,r=right q=ques,t=translated, m=music
-k++;window[t+"-q"+k+"-r"+k] = "My name is Ramesh."; window[t+"-t"+k+"-r"+k] = "मेरा नाम रमेश हे।"; window[t+"-q"+k+"-m"+k] = 'eng/level1/car.mp3';
-k++;window[t+"-q"+k+"-l"+k] = "Are you a student?"; window[t+"-t"+k+"-l"+k] = "क्या तुम छात्र है?"; window[t+"-q"+k+"-m"+k] = 'eng/level1/house.mp3';
-k++;window[t+"-q"+k+"-r"+k] = "No, I am not a student."; window[t+"-t"+k+"-r"+k] = "नहीं, मैं छात्र नहीं हूं"; window[t+"-q"+k+"-m"+k] = 'eng/level1/car.mp3';
-k++;window[t+"-q"+k+"-l"+k] = "Are you from India?"; window[t+"-t"+k+"-l"+k] = "क्या तुम भारत से हो?"; window[t+"-q"+k+"-m"+k] = 'eng/level1/house.mp3';
-k++;window[t+"-q"+k+"-r"+k] = "Yes, I am from India."; window[t+"-t"+k+"-r"+k] = "हां, मैं भारत से हूं"; window[t+"-q"+k+"-m"+k] = 'eng/level1/car.mp3';
-k++;window[t+"-q"+k+"-l"+k] = "Are you sad?"; window[t+"-t"+k+"-l"+k] = "क्या तुम दुखी हो?"; window[t+"-q"+k+"-m"+k] = 'eng/level1/house.mp3';
-k++;window[t+"-q"+k+"-r"+k] = "No, I am happy."; window[t+"-t"+k+"-r"+k] = "नहीं, मैं खुश हूं"; window[t+"-q"+k+"-m"+k] = 'eng/level1/car.mp3';
-k++;window[t+"-q"+k+"-l"+k] = "My house is big."; window[t+"-t"+k+"-l"+k] = "मेरा घर बड़ा है।"; window[t+"-q"+k+"-m"+k] = 'eng/level1/house.mp3';
-k++;window[t+"-q"+k+"-r"+k] = "My car is small."; window[t+"-t"+k+"-r"+k] = "मेरी गाड़ी छोटी है"; window[t+"-q"+k+"-m"+k] = 'eng/level1/car.mp3';
+window[t+"-type"+k] = "conversation"; xt=0;
+xt++;window[t+"-q"+xt+"-l"+k] = "What is your name?"; window[t+"-t"+xt+"-l"+k] = "तुम्हारा नाम क्या है?"; window[t+"-q"+xt+"-m"+k] = 'eng/level3/what-is-your-name.mp3'; //l=left,r=right q=ques,t=translated, m=music
+xt++;window[t+"-q"+xt+"-r"+k] = "My name is Ramesh."; window[t+"-t"+xt+"-r"+k] = "मेरा नाम रमेश हे।"; window[t+"-q"+xt+"-m"+k] = 'eng/level3/my-name-is-ramesh.mp3';
+xt++;window[t+"-q"+xt+"-l"+k] = "Are you a student?"; window[t+"-t"+xt+"-l"+k] = "क्या तुम छात्र है?"; window[t+"-q"+xt+"-m"+k] = 'eng/level3/are-you-a-student.mp3';
+xt++;window[t+"-q"+xt+"-r"+k] = "No, I am not a student."; window[t+"-t"+xt+"-r"+k] = "नहीं, मैं छात्र नहीं हूं"; window[t+"-q"+xt+"-m"+k] = 'eng/level3/no-i-am-not-a-student.mp3';
+xt++;window[t+"-q"+xt+"-l"+k] = "Are you from India?"; window[t+"-t"+xt+"-l"+k] = "क्या तुम भारत से हो?"; window[t+"-q"+xt+"-m"+k] = 'eng/level3/are-you-from-india.mp3';
+xt++;window[t+"-q"+xt+"-r"+k] = "Yes, I am from India."; window[t+"-t"+xt+"-r"+k] = "हां, मैं भारत से हूं"; window[t+"-q"+xt+"-m"+k] = 'eng/level3/yes-i-am-from-india.mp3';
+xt++;window[t+"-q"+xt+"-l"+k] = "Are you sad?"; window[t+"-t"+xt+"-l"+k] = "क्या तुम दुखी हो?"; window[t+"-q"+xt+"-m"+k] = 'eng/level3/are-you-sad.mp3';
+xt++;window[t+"-q"+xt+"-r"+k] = "No, I am happy."; window[t+"-t"+xt+"-r"+k] = "नहीं, मैं खुश हूं"; window[t+"-q"+xt+"-m"+k] = 'eng/level3/no-i-am-happy.mp3';
+xt++;window[t+"-q"+xt+"-l"+k] = "My house is big."; window[t+"-t"+xt+"-l"+k] = "मेरा घर बड़ा है।"; window[t+"-q"+xt+"-m"+k] = 'eng/level3/my-house-is-big.mp3';
+xt++;window[t+"-q"+xt+"-r"+k] = "My car is small."; window[t+"-t"+xt+"-r"+k] = "मेरी गाड़ी छोटी है"; window[t+"-q"+xt+"-m"+k] = 'eng/level3/my-car-is-small.mp3';
 window[t+"-len"+k]=a;
 
 lesson4Total = k;
